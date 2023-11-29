@@ -40,47 +40,62 @@
 // createProduct({ name: "qwe", price: 30, quantity: 10 }, logProduct);
 // createProduct({ name: "qwe", price: 20, quantity: 10 }, logTotalPrice);
 
-const TRANSACTION_LIMIT = 1000;
+// const TRANSACTION_LIMIT = 1000;
 
-const account = {
-  username: "Jacob",
-  balance: 400,
+// const account = {
+//   username: "Jacob",
+//   balance: 400,
 
-  withdraw(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      onError(`❌❌❌Transaction Limit is  ${TRANSACTION_LIMIT}`);
-      return;
-    } else if (this.balance < amount) {
-      onError("❌❌❌Not Enough money in the account");
-      return;
-    }
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`❌❌❌Transaction Limit is  ${TRANSACTION_LIMIT}`);
+//       return;
+//     } else if (this.balance < amount) {
+//       onError("❌❌❌Not Enough money in the account");
+//       return;
+//     }
 
-    this.balance -= amount;
-    onSuccess(`😁😁😁Transaction complete ${amount}, balance: ${this.balance}`);
-  },
+//     this.balance -= amount;
+//     onSuccess(`😁😁😁Transaction complete ${amount}, balance: ${this.balance}`);
+//   },
 
-  deposit(amount, onSuccess, onError) {
-    if (amount > TRANSACTION_LIMIT) {
-      onError(`❌❌❌Transaction Limit is  ${TRANSACTION_LIMIT}`);
-      return;
-    } else if (amount <= 0) {
-      onError(`Nice try BRO 🤣`);
-      return;
-    }
-    this.balance += amount;
-    onSuccess(`💪💪💪Added ${amount}, balance: ${this.balance}`);
-  },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`❌❌❌Transaction Limit is  ${TRANSACTION_LIMIT}`);
+//       return;
+//     } else if (amount <= 0) {
+//       onError(`Nice try BRO 🤣`);
+//       return;
+//     }
+//     this.balance += amount;
+//     onSuccess(`💪💪💪Added ${amount}, balance: ${this.balance}`);
+//   },
+// };
+
+// function handleSuccess(message) {
+//   console.log(`Success!!! ${message}`);
+// }
+
+// function handleError(message) {
+//   console.log(`Error! ${message}`);
+// }
+
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
+
+// const logItems = (arr) =>
+//   arr.forEach((item, idx) => console.log(`${idx + 1} - ${item}`));
+
+// logItems(["Mango", "Poly", "Ajax"]);
+
+const calculateAverage = (...arr) => {
+  let total = 0;
+  arr.forEach((value) => (total += value));
+  return total / arr.length;
 };
 
-function handleSuccess(message) {
-  console.log(`Success!!! ${message}`);
-}
-
-function handleError(message) {
-  console.log(`Error! ${message}`);
-}
-
-account.withdraw(300, handleSuccess, handleError);
-account.deposit(0, handleSuccess, handleError);
-account.deposit(-600, handleSuccess, handleError);
-account.deposit(600, handleSuccess, handleError);
+console.log(
+  calculateAverage(1, 2, 2, 3, 3, 5, 4, 5, 65, 14, 6541, 6, 333333).toFixed(2)
+);
