@@ -21,6 +21,21 @@
 // console.log(each(arr, add));
 // console.log(each(arr, mult));
 
-function handleSuccess(message) {
-  console.log(`Success! ${message}`);
+function createProduct(obj, callback) {
+  const product = {
+    id: Date.now(),
+    ...obj,
+  };
+  callback(product);
 }
+
+function logProduct(obj) {
+  console.log(obj);
+}
+
+function logTotalPrice({ price, quantity }) {
+  console.log(`Total price ${price * quantity}`);
+}
+
+createProduct({ name: "qwe", price: 30, quantity: 10 }, logProduct);
+createProduct({ name: "qwe", price: 20, quantity: 10 }, logTotalPrice);
