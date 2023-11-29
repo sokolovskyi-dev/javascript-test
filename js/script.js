@@ -21,21 +21,66 @@
 // console.log(each(arr, add));
 // console.log(each(arr, mult));
 
-function createProduct(obj, callback) {
-  const product = {
-    id: Date.now(),
-    ...obj,
-  };
-  callback(product);
+// function createProduct(obj, callback) {
+//   const product = {
+//     id: Date.now(),
+//     ...obj,
+//   };
+//   callback(product);
+// }
+
+// function logProduct(obj) {
+//   console.log(obj);
+// }
+
+// function logTotalPrice({ price, quantity }) {
+//   console.log(`Total price ${price * quantity}`);
+// }
+
+// createProduct({ name: "qwe", price: 30, quantity: 10 }, logProduct);
+// createProduct({ name: "qwe", price: 20, quantity: 10 }, logTotalPrice);
+
+const TRANSACTION_LIMIT = 1000;
+
+const account = {
+  username: "Jacob",
+  balance: 400,
+
+  withdraw(amount, onSuccess, onError) {
+    if (amount > TRANSACTION_LIMIT) {
+      onError(`❌❌❌Transaction Limit is  ${TRANSACTION_LIMIT}`);
+      return;
+    } else if (this.balance < amount) {
+      onError("❌❌❌Not Enough money in the account");
+      return;
+    }
+
+    this.balance -= amount;
+    onSuccess(`😁😁😁Transaction complete ${amount}, balance: ${this.balance}`);
+  },
+
+  deposit(amount, onSuccess, onError) {
+    if (amount > TRANSACTION_LIMIT) {
+      onError(`❌❌❌Transaction Limit is  ${TRANSACTION_LIMIT}`);
+      return;
+    } else if (amount <= 0) {
+      onError(`Nice try BRO 🤣`);
+      return;
+    }
+    this.balance += amount;
+    onSuccess(`💪💪💪Added ${amount}, balance: ${this.balance}`);
+  },
+};
+
+function handleSuccess(message) {
+  console.log(`Success!!! ${message}`);
 }
 
-function logProduct(obj) {
-  console.log(obj);
+function handleError(message) {
+  console.log(`Error! ${message}`);
 }
 
-function logTotalPrice({ price, quantity }) {
-  console.log(`Total price ${price * quantity}`);
-}
-
-createProduct({ name: "qwe", price: 30, quantity: 10 }, logProduct);
-createProduct({ name: "qwe", price: 20, quantity: 10 }, logTotalPrice);
+account.withdraw(300, handleSuccess, handleError);
+account.deposit(0, handleSuccess, handleError);
+account.deposit(-600, handleSuccess, handleError);
+account.deposit(600, handleSuccess, handleError);
