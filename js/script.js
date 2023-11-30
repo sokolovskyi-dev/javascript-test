@@ -90,12 +90,66 @@
 
 // logItems(["Mango", "Poly", "Ajax"]);
 
-const calculateAverage = (...arr) => {
-  let total = 0;
-  arr.forEach((value) => (total += value));
-  return total / arr.length;
+// const calculateAverage = (...arr) => {
+//   let total = 0;
+//   arr.forEach((value) => (total += value));
+//   return total / arr.length;
+// };
+
+// console.log(
+//   calculateAverage(1, 2, 2, 3, 3, 5, 4, 5, 65, 14, 6541, 6, 333333).toFixed(2)
+// );
+
+-------------- Замыкание;
+
+const makeDish = function (sheffName, dish) {
+  console.log(`${sheffName} готовит ${dish}`);
 };
 
-console.log(
-  calculateAverage(1, 2, 2, 3, 3, 5, 4, 5, 65, 14, 6541, 6, 333333).toFixed(2)
-);
+const makeSheff = function (name) {
+  const makeDish = function (dish) {
+    console.log(`${name} готовит ${dish}`);
+  };
+  return makeDish;
+};
+
+const mango = makeSheff("Mango");
+
+mango("котлеты");
+
+const poly = makeSheff("Poly");
+poly("чай");
+
+Определяем функцию makeDish, которая принимает два параметра: sheffName и dish.
+Эта функция выводит в консоль сообщение, в котором говорится, что повар (sheffName) готовит блюдо (dish).
+const makeDish = function (sheffName, dish) {
+  console.log(`${sheffName} готовит ${dish}`);
+};
+
+
+
+function createCounter() {
+  let count = 0;
+  return function () {
+    count += 1;
+    return count;
+  };
+}
+
+const counter = createCounter();
+
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
+const rounder = function (places) {
+  return function (number) {
+    return Number(number.toFixed(places));
+  };
+};
+
+const rounder2 = rounder(2);
+const rounder3 = rounder(3);
+
+console.log(rounder2(3.2225685));
+console.log(rounder3(5.65892225685));
