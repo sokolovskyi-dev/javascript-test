@@ -102,46 +102,92 @@
 
 //-------------- Замыкание;
 
-const makeSheff = function (name) {
-  const makeDish = function (dish) {
-    console.log(`${name} готовит ${dish}`);
-  };
-  return makeDish;
-};
+// const makeSheff = function (name) {
+//   const makeDish = function (dish) {
+//     console.log(`${name} готовит ${dish}`);
+//   };
+//   return makeDish;
+// };
 
-const mango = makeSheff("Mango");
+// const mango = makeSheff("Mango");
 
-mango("котлеты");
+// mango("котлеты");
 
-const poly = makeSheff("Poly");
-poly("чай");
+// const poly = makeSheff("Poly");
+// poly("чай");
 
-const makeDish = function (sheffName, dish) {
-  console.log(`${sheffName} готовит ${dish}`);
-};
+// const makeDish = function (sheffName, dish) {
+//   console.log(`${sheffName} готовит ${dish}`);
+// };
 
-function createCounter() {
-  let count = 0;
-  return function () {
-    count += 1;
-    return count;
+// function createCounter() {
+//   let count = 0;
+//   return function () {
+//     count += 1;
+//     return count;
+//   };
+// }
+
+// const counter = createCounter();
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// const rounder = function (places) {
+//   return function (number) {
+//     return Number(number.toFixed(places));
+//   };
+// };
+
+// const rounder2 = rounder(2);
+// const rounder3 = rounder(3);
+
+// console.log(rounder2(3.2225685));
+// console.log(rounder3(5.65892225685));
+
+// function createCounter() {
+//   let count = 0;
+
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+
+// const counter = createCounter();
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+function createBankAccount(initialBalance) {
+  let balance = initialBalance;
+
+  return {
+    deposit: function (amount) {
+      balance += amount;
+      return balance;
+    },
+
+    withdraw: function (amount) {
+      if (amount <= balance) {
+        balance -= amount;
+        return balance;
+      } else {
+        return "Not enough money";
+      }
+    },
+    getBalance: function () {
+      return balance;
+    },
   };
 }
 
-const counter = createCounter();
+const account = createBankAccount(100);
+console.log(account.getBalance()); // 100
 
-console.log(counter());
-console.log(counter());
-console.log(counter());
-
-const rounder = function (places) {
-  return function (number) {
-    return Number(number.toFixed(places));
-  };
-};
-
-const rounder2 = rounder(2);
-const rounder3 = rounder(3);
-
-console.log(rounder2(3.2225685));
-console.log(rounder3(5.65892225685));
+account.deposit(50);
+console.log(account.getBalance());
+console.log(account.withdraw(20));
+console.log(account.withdraw(200));
