@@ -161,33 +161,46 @@
 // console.log(counter());
 // console.log(counter());
 
-function createBankAccount(initialBalance) {
-  let balance = initialBalance;
+// function createBankAccount(initialBalance) {
+//   let balance = initialBalance;
 
-  return {
-    deposit: function (amount) {
-      balance += amount;
-      return balance;
-    },
+//   return {
+//     deposit: function (amount) {
+//       balance += amount;
+//       return balance;
+//     },
 
-    withdraw: function (amount) {
-      if (amount <= balance) {
-        balance -= amount;
-        return balance;
-      } else {
-        return "Not enough money";
-      }
-    },
-    getBalance: function () {
-      return balance;
-    },
-  };
-}
+//     withdraw: function (amount) {
+//       if (amount <= balance) {
+//         balance -= amount;
+//         return balance;
+//       } else {
+//         return "Not enough money";
+//       }
+//     },
+//     getBalance: function () {
+//       return balance;
+//     },
+//   };
+// }
 
-const account = createBankAccount(100);
-console.log(account.getBalance()); // 100
+// const account = createBankAccount(100);
+// console.log(account.getBalance()); // 100
 
-account.deposit(50);
-console.log(account.getBalance());
-console.log(account.withdraw(20));
-console.log(account.withdraw(200));
+// account.deposit(50);
+// console.log(account.getBalance());
+// console.log(account.withdraw(20));
+// console.log(account.withdraw(200));
+
+const numbers = [5, 10, 15, 20, 25];
+
+// numbers.forEach(function (number) {
+//   number *= 2;
+//   console.log("number", number);
+// });
+
+const doubleNumbers = numbers.map((number) => {
+  console.log(number);
+  return number * 3;
+});
+console.log(doubleNumbers);
