@@ -100,11 +100,7 @@
 //   calculateAverage(1, 2, 2, 3, 3, 5, 4, 5, 65, 14, 6541, 6, 333333).toFixed(2)
 // );
 
--------------- Замыкание;
-
-const makeDish = function (sheffName, dish) {
-  console.log(`${sheffName} готовит ${dish}`);
-};
+//-------------- Замыкание;
 
 const makeSheff = function (name) {
   const makeDish = function (dish) {
@@ -120,13 +116,9 @@ mango("котлеты");
 const poly = makeSheff("Poly");
 poly("чай");
 
-Определяем функцию makeDish, которая принимает два параметра: sheffName и dish.
-Эта функция выводит в консоль сообщение, в котором говорится, что повар (sheffName) готовит блюдо (dish).
 const makeDish = function (sheffName, dish) {
   console.log(`${sheffName} готовит ${dish}`);
 };
-
-
 
 function createCounter() {
   let count = 0;
