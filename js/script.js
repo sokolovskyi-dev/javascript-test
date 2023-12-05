@@ -192,15 +192,47 @@
 // console.log(account.withdraw(20));
 // console.log(account.withdraw(200));
 
-const numbers = [5, 10, 15, 20, 25];
+// const numbers = [5, 10, 15, 20, 25];
 
-// numbers.forEach(function (number) {
-//   number *= 2;
-//   console.log("number", number);
+// // numbers.forEach(function (number) {
+// //   number *= 2;
+// //   console.log("number", number);
+// // });
+
+// const doubleNumbers = numbers.map((number) => {
+//   console.log(number);
+//   return number * 3;
 // });
+// console.log(doubleNumbers);
 
-const doubleNumbers = numbers.map((number) => {
-  console.log(number);
-  return number * 3;
-});
-console.log(doubleNumbers);
+// function calcSum(numOne, numTwo) {
+//   if (numTwo === 1) {
+//     return numOne;
+//   } else {
+//     return numOne * calcSum(numOne, numTwo - 1);
+//   }
+// }
+
+// console.log(calcSum(2, 3));
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const total = numbers.reduce((acc, number) => acc + number, 0);
+// console.log(total);
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150,
+// };
+
+// const totalSalary = Object.values(salary);
+// console.log(totalSalary);
+
+// const sum = totalSalary.reduce((acc, number) => acc + number, 0);
+// console.log(sum);
+
+const tagsStatus = allTags.reduce(
+  (acc, tag) => ({ ...acc, [tag]: acc[tag] ? accc[tag] + 1 : 1 }),
+  {}
+);
