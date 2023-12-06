@@ -232,7 +232,31 @@
 // const sum = totalSalary.reduce((acc, number) => acc + number, 0);
 // console.log(sum);
 
-const tagsStatus = allTags.reduce(
-  (acc, tag) => ({ ...acc, [tag]: acc[tag] ? accc[tag] + 1 : 1 }),
-  {}
-);
+// const tweets = [
+//   { id: "000", like: 5, tags: ["js", "nodejs"] },
+//   { id: "001", like: 2, tags: ["html", "css"] },
+//   { id: "002", like: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", like: 8, tags: ["css", "react"] },
+//   { id: "004", like: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+
+// console.log(allTags);
+
+// const tagStatus = allTags.reduce(
+//   (acc, tag) => ({ ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 }),
+//   {}
+// );
+
+// console.log(tagStatus);
+
+// const numbers = [1, 9, 6, 2, 3];
+
+// numbers.sort((a, b) => {
+//   return b - a;
+// });
+
+// console.log(numbers);
+
+// const copy = [...numbers];
