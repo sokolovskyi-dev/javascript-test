@@ -260,3 +260,137 @@
 // console.log(numbers);
 
 // const copy = [...numbers];
+
+const cars = [
+  {
+    make: "Honda",
+    model: "CR-V",
+    type: "suv",
+    amount: 14,
+    price: 24888,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "Accord",
+    type: "sedan",
+    amount: 10,
+    price: 22698,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "Civic",
+    type: "sedan",
+    amount: 9,
+    price: 214821,
+    onSale: false,
+  },
+  {
+    make: "Mazda",
+    model: "CX-9",
+    type: "suv",
+    amount: 18,
+    price: 29001,
+    onSale: true,
+  },
+  {
+    make: "Mazda",
+    model: "CX-30",
+    type: "suv",
+    amount: 4,
+    price: 22145,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Corolla",
+    type: "sedan",
+    amount: 141,
+    price: 23888,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "RAV-4",
+    type: "suv",
+    amount: 1,
+    price: 28888,
+    onSale: true,
+  },
+  {
+    make: "Toyota",
+    model: "Land Cruiser",
+    type: "suv",
+    amount: 6,
+    price: 54888,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Focus",
+    type: "sedan",
+    amount: 33,
+    price: 19888,
+    onSale: false,
+  },
+  {
+    make: "Ford",
+    model: "Explorer",
+    type: "suv",
+    amount: 11,
+    price: 36828,
+    onSale: true,
+  },
+];
+
+const getModels = (cars) => {
+  return cars.map((car) => car.model);
+};
+
+console.table(getModels(cars));
+
+const makeCarsWithDiscount = (cars, discount) => {
+  return cars.map((car) => ({
+    ...car,
+    price: car.price * (1 - discount),
+  }));
+};
+
+console.table(makeCarsWithDiscount(cars, 0.2));
+console.table(makeCarsWithDiscount(cars, 0.4));
+
+const filterByPrice = (cars, treshold) => {
+  return cars.filter((car) => car.price < treshold);
+};
+
+console.table(filterByPrice(cars, 30000));
+console.table(filterByPrice(cars, 20000));
+
+const getCarsWithDiscount = (cars) => {
+  return cars.filter((car) => car.onSale);
+};
+
+console.table(getCarsWithDiscount(cars));
+
+const getCarsWithType = (cars, type) => {
+  return cars.filter((car) => car.type === type && car.make === "Honda");
+};
+
+console.table(getCarsWithType(cars, "suv"));
+console.table(getCarsWithType(cars, "sedan"));
+
+const sortByAscendingAmount = (cars) =>
+  [...cars].sort((a, b) => a.price - b.price);
+
+console.table(sortByAscendingAmount(cars));
+
+const getTotalAmount = (cars) =>
+  cars.reduce((acc, { amount }) => (acc += amount), 0);
+
+console.log(getTotalAmount(cars));
+
+const getModelOnSale = (cars) =>
+  cars.filter(({ onSale }) => onSale).map(({ model }) => model);
+
+console.log(getModelOnSale(cars));
