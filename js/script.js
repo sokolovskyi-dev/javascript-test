@@ -394,3 +394,34 @@ const getModelOnSale = (cars) =>
   cars.filter(({ onSale }) => onSale).map(({ model }) => model);
 
 console.log(getModelOnSale(cars));
+
+const str = "ldsfjhvsdkfhgvsklughsliughisdhgsiudfghilosdhgsdkfgjhdslfiguhdslf";
+
+const result = str.split("").reduce((acc, item) => {
+  // acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
+  const keys = Object.keys(acc);
+  keys.includes(item) ? (acc[item] += 1) : (acc[item] = 1);
+
+  return acc;
+}, {});
+
+console.log(result);
+
+// const arr = ["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"];
+
+function logCars(arr) {
+  const result = arr.reduce((acc, car, idx) => {
+    return acc + `${idx + 1} - ${car}\n`;
+  }, "");
+  console.log(result);
+}
+
+console.log(logCars(["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"]));
+console.log(logCars([]));
+
+const students = [
+  { name: "Иван", scores: [5, 4, 4, 5] },
+  { name: "Светлана", scores: [3, 5, 4, 3] },
+  { name: "Алексей", scores: [4, 5, 5, 4] },
+  // и так далее
+];
