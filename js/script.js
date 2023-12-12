@@ -261,167 +261,215 @@
 
 // const copy = [...numbers];
 
-const cars = [
-  {
-    make: "Honda",
-    model: "CR-V",
-    type: "suv",
-    amount: 14,
-    price: 24888,
-    onSale: true,
-  },
-  {
-    make: "Honda",
-    model: "Accord",
-    type: "sedan",
-    amount: 10,
-    price: 22698,
-    onSale: true,
-  },
-  {
-    make: "Honda",
-    model: "Civic",
-    type: "sedan",
-    amount: 9,
-    price: 214821,
-    onSale: false,
-  },
-  {
-    make: "Mazda",
-    model: "CX-9",
-    type: "suv",
-    amount: 18,
-    price: 29001,
-    onSale: true,
-  },
-  {
-    make: "Mazda",
-    model: "CX-30",
-    type: "suv",
-    amount: 4,
-    price: 22145,
-    onSale: false,
-  },
-  {
-    make: "Toyota",
-    model: "Corolla",
-    type: "sedan",
-    amount: 141,
-    price: 23888,
-    onSale: false,
-  },
-  {
-    make: "Toyota",
-    model: "RAV-4",
-    type: "suv",
-    amount: 1,
-    price: 28888,
-    onSale: true,
-  },
-  {
-    make: "Toyota",
-    model: "Land Cruiser",
-    type: "suv",
-    amount: 6,
-    price: 54888,
-    onSale: true,
-  },
-  {
-    make: "Ford",
-    model: "Focus",
-    type: "sedan",
-    amount: 33,
-    price: 19888,
-    onSale: false,
-  },
-  {
-    make: "Ford",
-    model: "Explorer",
-    type: "suv",
-    amount: 11,
-    price: 36828,
-    onSale: true,
-  },
-];
+// const cars = [
+//   {
+//     make: "Honda",
+//     model: "CR-V",
+//     type: "suv",
+//     amount: 14,
+//     price: 24888,
+//     onSale: true,
+//   },
+//   {
+//     make: "Honda",
+//     model: "Accord",
+//     type: "sedan",
+//     amount: 10,
+//     price: 22698,
+//     onSale: true,
+//   },
+//   {
+//     make: "Honda",
+//     model: "Civic",
+//     type: "sedan",
+//     amount: 9,
+//     price: 214821,
+//     onSale: false,
+//   },
+//   {
+//     make: "Mazda",
+//     model: "CX-9",
+//     type: "suv",
+//     amount: 18,
+//     price: 29001,
+//     onSale: true,
+//   },
+//   {
+//     make: "Mazda",
+//     model: "CX-30",
+//     type: "suv",
+//     amount: 4,
+//     price: 22145,
+//     onSale: false,
+//   },
+//   {
+//     make: "Toyota",
+//     model: "Corolla",
+//     type: "sedan",
+//     amount: 141,
+//     price: 23888,
+//     onSale: false,
+//   },
+//   {
+//     make: "Toyota",
+//     model: "RAV-4",
+//     type: "suv",
+//     amount: 1,
+//     price: 28888,
+//     onSale: true,
+//   },
+//   {
+//     make: "Toyota",
+//     model: "Land Cruiser",
+//     type: "suv",
+//     amount: 6,
+//     price: 54888,
+//     onSale: true,
+//   },
+//   {
+//     make: "Ford",
+//     model: "Focus",
+//     type: "sedan",
+//     amount: 33,
+//     price: 19888,
+//     onSale: false,
+//   },
+//   {
+//     make: "Ford",
+//     model: "Explorer",
+//     type: "suv",
+//     amount: 11,
+//     price: 36828,
+//     onSale: true,
+//   },
+// ];
 
-const getModels = (cars) => {
-  return cars.map((car) => car.model);
-};
+// const getModels = (cars) => {
+//   return cars.map((car) => car.model);
+// };
 
-console.table(getModels(cars));
+// console.table(getModels(cars));
 
-const makeCarsWithDiscount = (cars, discount) => {
-  return cars.map((car) => ({
-    ...car,
-    price: car.price * (1 - discount),
-  }));
-};
+// const makeCarsWithDiscount = (cars, discount) => {
+//   return cars.map((car) => ({
+//     ...car,
+//     price: car.price * (1 - discount),
+//   }));
+// };
 
-console.table(makeCarsWithDiscount(cars, 0.2));
-console.table(makeCarsWithDiscount(cars, 0.4));
+// console.table(makeCarsWithDiscount(cars, 0.2));
+// console.table(makeCarsWithDiscount(cars, 0.4));
 
-const filterByPrice = (cars, treshold) => {
-  return cars.filter((car) => car.price < treshold);
-};
+// const filterByPrice = (cars, treshold) => {
+//   return cars.filter((car) => car.price < treshold);
+// };
 
-console.table(filterByPrice(cars, 30000));
-console.table(filterByPrice(cars, 20000));
+// console.table(filterByPrice(cars, 30000));
+// console.table(filterByPrice(cars, 20000));
 
-const getCarsWithDiscount = (cars) => {
-  return cars.filter((car) => car.onSale);
-};
+// const getCarsWithDiscount = (cars) => {
+//   return cars.filter((car) => car.onSale);
+// };
 
-console.table(getCarsWithDiscount(cars));
+// console.table(getCarsWithDiscount(cars));
 
-const getCarsWithType = (cars, type) => {
-  return cars.filter((car) => car.type === type && car.make === "Honda");
-};
+// const getCarsWithType = (cars, type) => {
+//   return cars.filter((car) => car.type === type && car.make === "Honda");
+// };
 
-console.table(getCarsWithType(cars, "suv"));
-console.table(getCarsWithType(cars, "sedan"));
+// console.table(getCarsWithType(cars, "suv"));
+// console.table(getCarsWithType(cars, "sedan"));
 
-const sortByAscendingAmount = (cars) =>
-  [...cars].sort((a, b) => a.price - b.price);
+// const sortByAscendingAmount = (cars) =>
+//   [...cars].sort((a, b) => a.price - b.price);
 
-console.table(sortByAscendingAmount(cars));
+// console.table(sortByAscendingAmount(cars));
 
-const getTotalAmount = (cars) =>
-  cars.reduce((acc, { amount }) => (acc += amount), 0);
+// const getTotalAmount = (cars) =>
+//   cars.reduce((acc, { amount }) => (acc += amount), 0);
 
-console.log(getTotalAmount(cars));
+// console.log(getTotalAmount(cars));
 
-const getModelOnSale = (cars) =>
-  cars.filter(({ onSale }) => onSale).map(({ model }) => model);
+// const getModelOnSale = (cars) =>
+//   cars.filter(({ onSale }) => onSale).map(({ model }) => model);
 
-console.log(getModelOnSale(cars));
+// console.log(getModelOnSale(cars));
 
-const str = "ldsfjhvsdkfhgvsklughsliughisdhgsiudfghilosdhgsdkfgjhdslfiguhdslf";
+// const str = "ldsfjhvsdkfhgvsklughsliughisdhgsiudfghilosdhgsdkfgjhdslfiguhdslf";
 
-const result = str.split("").reduce((acc, item) => {
-  // acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
-  const keys = Object.keys(acc);
-  keys.includes(item) ? (acc[item] += 1) : (acc[item] = 1);
+// const result = str.split("").reduce((acc, item) => {
+//   // acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
+//   const keys = Object.keys(acc);
+//   keys.includes(item) ? (acc[item] += 1) : (acc[item] = 1);
 
-  return acc;
-}, {});
+//   return acc;
+// }, {});
 
-console.log(result);
+// console.log(result);
 
-// const arr = ["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"];
+// // const arr = ["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"];
 
-function logCars(arr) {
-  const result = arr.reduce((acc, car, idx) => {
-    return acc + `${idx + 1} - ${car}\n`;
-  }, "");
-  console.log(result);
-}
+// function logCars(arr) {
+//   const result = arr.reduce((acc, car, idx) => {
+//     return acc + `${idx + 1} - ${car}\n`;
+//   }, "");
+//   console.log(result);
+// }
 
-console.log(logCars(["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"]));
-console.log(logCars([]));
+// console.log(logCars(["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"]));
+// console.log(logCars([]));
 
 const students = [
   { name: "Иван", scores: [5, 4, 4, 5] },
   { name: "Светлана", scores: [3, 5, 4, 3] },
   { name: "Алексей", scores: [4, 5, 5, 4] },
-  // и так далее
 ];
+
+function addScore(studentName, score) {
+  const student = students.find((s) => s.name === studentName);
+
+  student ? student.scores.push(score) : console.log("Error");
+  console.log(student);
+}
+
+function calculateAverageScore(studentName) {
+  const student = students.find((s) => s.name === studentName);
+
+  if (!student) {
+    console.log("Error1 : нет такого студента");
+    return;
+  }
+
+  const averageScore =
+    student.scores.reduce((acc, score) => acc + score, 0) /
+    student.scores.length;
+  console.log(averageScore);
+}
+
+function getTopStudent(students) {
+  if (students.length === 0) {
+    return "Список студентов пуст";
+  }
+
+  const studentsWithAverages = students.map((student) => {
+    const averageScore =
+      student.scores.reduce((acc, score) => acc + score, 0) /
+      student.scores.length;
+    return { name: student.name, averageScore };
+  });
+
+  const topStudent = studentsWithAverages.reduce(
+    (max, student) => (student.averageScore > max.averageScore ? student : max),
+    studentsWithAverages[0]
+  );
+
+  return topStudent.name;
+}
+
+addScore("Иван", 3);
+addScore("Иванннq", 3);
+
+calculateAverageScore("Иван");
+calculateAverageScore("Иванdddddd");
+
+getTopStudent(students);
