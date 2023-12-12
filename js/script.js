@@ -419,57 +419,79 @@
 // console.log(logCars(["Honda", "Audi", "BMW", "Skoda", "Ford", "Renault"]));
 // console.log(logCars([]));
 
+// const students = [
+//   { name: "Иван", scores: [5, 4, 4, 5] },
+//   { name: "Светлана", scores: [3, 5, 4, 3] },
+//   { name: "Алексей", scores: [4, 5, 5, 4] },
+// ];
+
+// function addScore(studentName, score) {
+//   const student = students.find((s) => s.name === studentName);
+
+//   student ? student.scores.push(score) : console.log("Error");
+//   console.log(student);
+// }
+
+// function calculateAverageScore(studentName) {
+//   const student = students.find((s) => s.name === studentName);
+
+//   if (!student) {
+//     console.log("Error1 : нет такого студента");
+//     return;
+//   }
+
+//   const averageScore =
+//     student.scores.reduce((acc, score) => acc + score, 0) /
+//     student.scores.length;
+//   console.log(averageScore);
+// }
+
+// function getTopStudent(students) {
+//   if (students.length === 0) {
+//     return "Список студентов пуст";
+//   }
+
+//   const studentsWithAverages = students.map((student) => {
+//     const averageScore =
+//       student.scores.reduce((acc, score) => acc + score, 0) /
+//       student.scores.length;
+//     return { name: student.name, averageScore };
+//   });
+
+//   const topStudent = studentsWithAverages.reduce(
+//     (max, student) => (student.averageScore > max.averageScore ? student : max),
+//     studentsWithAverages[0]
+//   );
+
+//   return topStudent.name;
+// }
+
+// addScore("Иван", 3);
+// addScore("Иванннq", 3);
+
+// calculateAverageScore("Иван");
+// calculateAverageScore("Иванdddddd");
+
 const students = [
   { name: "Иван", scores: [5, 4, 4, 5] },
   { name: "Светлана", scores: [3, 5, 4, 3] },
   { name: "Алексей", scores: [4, 5, 5, 4] },
 ];
 
-function addScore(studentName, score) {
-  const student = students.find((s) => s.name === studentName);
-
-  student ? student.scores.push(score) : console.log("Error");
-  console.log(student);
-}
-
-function calculateAverageScore(studentName) {
-  const student = students.find((s) => s.name === studentName);
-
-  if (!student) {
-    console.log("Error1 : нет такого студента");
+function getTopStudent(students) {
+  if (students.length === 0) {
+    console.log("No students found");
     return;
   }
 
-  const averageScore =
-    student.scores.reduce((acc, score) => acc + score, 0) /
-    student.scores.length;
-  console.log(averageScore);
-}
+  const rrr = students.map((student) => ({ name: student.name, scores:  }));
+  console.log(rrr);
 
-function getTopStudent(students) {
-  if (students.length === 0) {
-    return "Список студентов пуст";
-  }
-
-  const studentsWithAverages = students.map((student) => {
-    const averageScore =
-      student.scores.reduce((acc, score) => acc + score, 0) /
-      student.scores.length;
-    return { name: student.name, averageScore };
-  });
-
-  const topStudent = studentsWithAverages.reduce(
-    (max, student) => (student.averageScore > max.averageScore ? student : max),
-    studentsWithAverages[0]
-  );
+  const studentsWithAveragescore = students.reduce((acc, student) => {}, []);
 
   return topStudent.name;
 }
 
-addScore("Иван", 3);
-addScore("Иванннq", 3);
-
-calculateAverageScore("Иван");
-calculateAverageScore("Иванdddddd");
-
 getTopStudent(students);
+
+console.log("hello");
