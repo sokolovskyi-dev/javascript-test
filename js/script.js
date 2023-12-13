@@ -474,7 +474,10 @@
 
 const students = [
   { name: "Иван", scores: [5, 4, 4, 5] },
-  { name: "Светлана", scores: [3, 5, 4, 3] },
+  {
+    name: "Светлана",
+    scores: [3, 5, 4, 3],
+  },
   { name: "Алексей", scores: [4, 5, 5, 4] },
 ];
 
@@ -484,14 +487,23 @@ function getTopStudent(students) {
     return;
   }
 
-  const rrr = students.map((student) => ({ name: student.name, scores:  }));
-  console.log(rrr);
+  const studentsWithAverages = students.map((student) => {
+    const averageScore =
+      student.scores.reduce((acc, score) => acc + score, 0) /
+      student.scores.length;
 
-  const studentsWithAveragescore = students.reduce((acc, student) => {}, []);
+    return { name: student.name, averageScore };
+  });
 
+  console.log(studentsWithAverages);
+
+  const topStudent = studentsWithAverages.reduce(
+    (max, student) => (student.averageScore > max.averageScore ? student : max),
+    studentsWithAverages[0]
+  );
+
+  console.log(topStudent.name);
   return topStudent.name;
 }
 
 getTopStudent(students);
-
-console.log("hello");
