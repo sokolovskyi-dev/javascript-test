@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -472,38 +472,56 @@
 // calculateAverageScore("Иван");
 // calculateAverageScore("Иванdddddd");
 
-const students = [
-  { name: "Иван", scores: [5, 4, 4, 5] },
-  {
-    name: "Светлана",
-    scores: [3, 5, 4, 3],
-  },
-  { name: "Алексей", scores: [4, 5, 5, 4] },
-];
+// const students = [
+//   { name: "Иван", scores: [5, 4, 4, 5] },
+//   {
+//     name: "Светлана",
+//     scores: [3, 5, 4, 3],
+//   },
+//   { name: "Алексей", scores: [4, 5, 5, 4] },
+// ];
 
-function getTopStudent(students) {
-  if (students.length === 0) {
-    console.log("No students found");
-    return;
-  }
+// function getTopStudent(students) {
+//   if (students.length === 0) {
+//     console.log("No students found");
+//     return;
+//   }
 
-  const studentsWithAverages = students.map((student) => {
-    const averageScore =
-      student.scores.reduce((acc, score) => acc + score, 0) /
-      student.scores.length;
+//   const studentsWithAverages = students.map((student) => {
+//     const averageScore =
+//       student.scores.reduce((acc, score) => acc + score, 0) /
+//       student.scores.length;
 
-    return { name: student.name, averageScore };
-  });
+//     return { name: student.name, averageScore };
+//   });
 
-  console.log(studentsWithAverages);
+//   console.log(studentsWithAverages);
 
-  const topStudent = studentsWithAverages.reduce(
-    (max, student) => (student.averageScore > max.averageScore ? student : max),
-    studentsWithAverages[0]
-  );
+//   const topStudent = studentsWithAverages.reduce(
+//     (max, student) => (student.averageScore > max.averageScore ? student : max),
+//     studentsWithAverages[0]
+//   );
 
-  console.log(topStudent.name);
-  return topStudent.name;
-}
+//   console.log(topStudent.name);
+//   return topStudent.name;
+// }
 
-getTopStudent(students);
+// getTopStudent(students);
+
+const makeChangeColor = function () {
+  const changeColor = function (color) {
+    console.log("changeColor -> this", this);
+    this.color = color;
+  };
+  return changeColor;
+};
+
+const updateColor = makeChangeColor();
+
+const hat = {
+  color: "blue",
+  updateColor,
+};
+hat.updateColor("orange");
+
+console.log(hat);
