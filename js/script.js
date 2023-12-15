@@ -508,20 +508,57 @@
 
 // getTopStudent(students);
 
-const makeChangeColor = function () {
-  const changeColor = function (color) {
-    console.log("changeColor -> this", this);
-    this.color = color;
-  };
-  return changeColor;
-};
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log("changeColor -> this", this);
+//     this.color = color;
+//   };
+//   return changeColor;
+// };
 
-const updateColor = makeChangeColor();
+// const updateColor = makeChangeColor();
 
-const hat = {
-  color: "blue",
-  updateColor,
-};
-hat.updateColor("orange");
+// const hat = {
+//   color: "blue",
+//   updateColor,
+// };
+// hat.updateColor("orange");
 
-console.log(hat);
+// console.log(hat);
+
+// const counter = {
+//   value: 0,
+//   increment(value) {
+//     console.log("increment -> this", this);
+//     this.value += value;
+//   },
+//   decrement(value) {
+//     console.log("decrement -> this", this);
+//     this.value -= value;
+//   },
+// };
+
+// const updateCounter = function (value, operation) {
+//   operation(value);
+// };
+
+// updateCounter(10, counter.increment);
+
+// const showThis = function () {
+//   console.log("showThis -> this", this);
+// };
+
+// showThis();
+
+// const objA = {
+//   a: 5,
+//   b: 10,
+// };
+
+// const objC = {
+//   z: 5,
+// };
+
+// const objB = Object.create(objC);
+
+const Car = function () {};
