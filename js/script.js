@@ -561,4 +561,88 @@
 
 // const objB = Object.create(objC);
 
-const Car = function () {};
+class User {
+  static counter = 0;
+  static addUser() {
+    this.counter += 1;
+    console.log(`Number of users ${this.counter}`);
+  }
+  #location;
+  constructor({ name, email, age = 18, location = "world", password } = {}) {
+    this.name = name;
+    this.email = email;
+    this.age = age;
+    this.#location = location;
+    this.password = password;
+    User.addUser();
+  }
+
+  #getEmail() {
+    console.log(this.email);
+  }
+
+  get locale() {
+    return this.#location;
+  }
+
+  set locale(city) {
+    const value = prompt("Enter password");
+    this.#getEmail();
+    if (value === this.password) {
+      this.#location = city;
+      console.log(this.#location);
+    } else {
+      console.log("Hacker¡¡¡");
+    }
+  }
+}
+
+class Avatar extends User {
+  constructor({ name, email, password, location, age, damage }) {
+    super({ name, email, password, location, age });
+    this.damage = damage;
+  }
+  attack() {
+    console.log(`Attack with damage ${this.damage}`);
+  }
+}
+
+class Zombi extends User {
+  constructor({ name, email, password, location, age, poison }) {
+    super({ name, email, password, location, age });
+    this.poison = poison;
+  }
+
+  toBite() {
+    console.log(`Bite with ${this.poison}`);
+  }
+}
+
+const test = new Avatar({
+  name: "User A",
+  email: "test@gmail.com",
+  location: "Lviv",
+  password: "qwerty111",
+  damage: 700,
+});
+
+const test1 = new Zombi({
+  name: "User B",
+  email: "gmail@gmail.com",
+  age: 99,
+  poison: 500,
+});
+
+console.log(test);
+console.log(test1);
+
+const test2 = new User({
+  name: "User C",
+  email: "sdddddmail@gmail.com",
+  age: 50,
+});
+
+// console.log(test1);
+// console.log(test.#location);
+// test.locale = "Kyiv";
+// console.log(test);
