@@ -647,31 +647,136 @@
 // test.locale = "Kyiv";
 // console.log(test);
 
-class Blogger {
-  constructor({ name, age, numberOfPosts, topics }) {
-    (this.email = name),
-      (this.age = age),
-      (this.numberOfPosts = numberOfPosts),
-      (this.topics = topics);
+// class Blogger {
+//   constructor({ name, age, numberOfPosts, topics }) {
+//     (this.email = name),
+//       (this.age = age),
+//       (this.numberOfPosts = numberOfPosts),
+//       (this.topics = topics);
+//   }
+//   getInfo() {
+//     return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+//   }
+
+//   updatePostCount(value) {
+//     this.numberOfPosts += value;
+//   }
+// }
+
+// const mango = new Blogger({
+//   name: "mango@mail.com",
+//   age: 24,
+//   numberOfPosts: 20,
+//   topics: ["tech", "cooking"],
+// });
+
+// // console.log(mango);
+// console.log(mango.getInfo());
+
+// mango.updatePostCount(5);
+// console.log(mango.getInfo());
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItem(item) {
+//     if (!this.items.includes(item)) {
+//       this.items.push(item);
+//       return;
+//     }
+//     console.log("Такой товар уже есть");
+//   }
+
+//   removeItem(item) {
+//     const idx = this.items.indexOf(item);
+
+//     if (!!~idx) {
+//       this.items.splice(idx, 1);
+//     }
+//   }
+// }
+// const storage = new Storage(["🍎", "🍉", "🍈", "🍇"]);
+// const items = storage.getItems();
+// console.table(items);
+
+// storage.addItem("🍕");
+// console.table(items);
+// storage.addItem("🍕");
+// console.table(items);
+
+// storage.removeItem("🍉");
+// console.table(items);
+
+// class User {
+//   #login;
+//   #email;
+//   constructor({ login, email }) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   login: "Mango",
+//   email: "mango@dog.woof",
+// });
+
+// console.log(mango.login);
+// mango.login = "Mangodoge";
+// console.log(mango.login);
+
+class Notes {
+  static Priority = {
+    LOW: "low",
+    NORMAL: "normal",
+    HIGH: "high",
+  };
+
+  constructor(note) {
+    this.items = note;
   }
-  getInfo() {
-    return `User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+  addNote(note) {
+    const inArr = this.items.some(({ text }) => text === note.text);
+    if (!inArr) {
+      this.items.push(note);
+    }
   }
 
-  updatePostCount(value) {
-    this.numberOfPosts += value;
+  updateNote(text, newPriority) {
+    const idx = this.items.findIndex(({ text: noteText }) => noteText == text);
+    if (!!~idx) {
+      this.items[idx].priority = newPriority;
+    }
   }
 }
 
-const mango = new Blogger({
-  name: "mango@mail.com",
-  age: 24,
-  numberOfPosts: 20,
-  topics: ["tech", "cooking"],
+const myNotes = new Notes([]);
+
+myNotes.addNote({ text: "Моя первая заметка", priority: Notes.Priority.LOW });
+myNotes.addNote({ text: "Моя первая заметка", priority: Notes.Priority.LOW });
+myNotes.addNote({
+  text: "Моя вторая заметка",
+  priority: Notes.Priority.NORMAL,
 });
+console.log(myNotes.items);
 
-// console.log(mango);
-console.log(mango.getInfo());
-
-mango.updatePostCount(5);
-console.log(mango.getInfo());
+myNotes.updateNote("Моя вторая заметка", Notes.Priority.HIGH);
+console.log(myNotes.items);
