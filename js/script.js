@@ -743,40 +743,56 @@
 // mango.login = "Mangodoge";
 // console.log(mango.login);
 
-class Notes {
-  static Priority = {
-    LOW: "low",
-    NORMAL: "normal",
-    HIGH: "high",
-  };
+// class Notes {
+//   static Priority = {
+//     LOW: "low",
+//     NORMAL: "normal",
+//     HIGH: "high",
+//   };
 
-  constructor(note) {
-    this.items = note;
-  }
-  addNote(note) {
-    const inArr = this.items.some(({ text }) => text === note.text);
-    if (!inArr) {
-      this.items.push(note);
-    }
-  }
+//   constructor(note) {
+//     this.items = note;
+//   }
+//   addNote(note) {
+//     const inArr = this.items.some(({ text }) => text === note.text);
+//     if (!inArr) {
+//       this.items.push(note);
+//     }
+//   }
 
-  updateNote(text, newPriority) {
-    const idx = this.items.findIndex(({ text: noteText }) => noteText == text);
-    if (!!~idx) {
-      this.items[idx].priority = newPriority;
-    }
-  }
-}
+//   updateNote(text, newPriority) {
+//     const idx = this.items.findIndex(({ text: noteText }) => noteText == text);
+//     if (!!~idx) {
+//       this.items[idx].priority = newPriority;
+//     }
+//   }
+// }
 
-const myNotes = new Notes([]);
+// const myNotes = new Notes([]);
 
-myNotes.addNote({ text: "Моя первая заметка", priority: Notes.Priority.LOW });
-myNotes.addNote({ text: "Моя первая заметка", priority: Notes.Priority.LOW });
-myNotes.addNote({
-  text: "Моя вторая заметка",
-  priority: Notes.Priority.NORMAL,
-});
-console.log(myNotes.items);
+// myNotes.addNote({ text: "Моя первая заметка", priority: Notes.Priority.LOW });
+// myNotes.addNote({ text: "Моя первая заметка", priority: Notes.Priority.LOW });
+// myNotes.addNote({
+//   text: "Моя вторая заметка",
+//   priority: Notes.Priority.NORMAL,
+// });
+// console.log(myNotes.items);
 
-myNotes.updateNote("Моя вторая заметка", Notes.Priority.HIGH);
-console.log(myNotes.items);
+// myNotes.updateNote("Моя вторая заметка", Notes.Priority.HIGH);
+// console.log(myNotes.items);
+
+const User = function ({ email, password } = {}) {
+  this.email = email;
+  this.password = password;
+};
+
+User.prototype.changeEmail = function (newEmail) {
+  this.email = newEmail;
+};
+
+const mango = new User({ email: "mango@mail.com", password: 11111111 });
+
+console.log(mango);
+
+mango.changeEmail("myNewEmail@mail.com");
+console.log(mango);
