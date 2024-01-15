@@ -781,18 +781,74 @@
 // myNotes.updateNote("Моя вторая заметка", Notes.Priority.HIGH);
 // console.log(myNotes.items);
 
-const User = function ({ email, password } = {}) {
-  this.email = email;
-  this.password = password;
-};
+// const User = function ({ email, password } = {}) {
+//   this.email = email;
+//   this.password = password;
+// };
 
-User.prototype.changeEmail = function (newEmail) {
-  this.email = newEmail;
-};
+// User.prototype.changeEmail = function (newEmail) {
+//   this.email = newEmail;
+// };
 
-const mango = new User({ email: "mango@mail.com", password: 11111111 });
+// const mango = new User({ email: "mango@mail.com", password: 11111111 });
 
-console.log(mango);
+// console.log(mango);
 
-mango.changeEmail("myNewEmail@mail.com");
-console.log(mango);
+// mango.changeEmail("myNewEmail@mail.com");
+// console.log(mango);
+
+// const CounterPlugin = function ({
+//   rootSelector,
+//   initialValue = 0,
+//   step = 1,
+// } = {}) {
+//   this._value = initialValue;
+//   this._step = step;
+//   this.refs = this._getRefs(rootSelector);
+// };
+
+// CounterPlugin.prototype._getRefs = function (rootSelector) {
+//   const refs = {};
+//   refs.container = document.querySelector(rootSelector);
+//   refs.incremantBtn = document.querySelector("[data-increment]");
+//   refs.decremantBtn = document.querySelector("[data-decrement]");
+//   refs.value = refs.container.querySelector("[data-value]");
+
+//   return refs;
+// };
+
+// CounterPlugin.prototype.increment = function () {
+//   this._value += this._step;
+// };
+// CounterPlugin.prototype.decrement = function () {
+//   this._value -= this._step;
+// };
+
+// const counter1 = new CounterPlugin({ rootSelector: "#counter-1", step: 10 });
+// console.log("counter1", counter1);
+
+// const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
+// console.log("counter2", counter2);
+
+class Hero {
+  constructor(name = "hero", xp = 0) {
+    this.name = name;
+    this.xp = xp;
+  }
+  gainXP(amount) {
+    console.log(`${this.name} получает ${amount} опыта`);
+    this.xp += amount;
+  }
+}
+
+class Warrior extends Hero {
+  constructor(name, xp, weapon) {
+    super(name, xp);
+    this.weapon = weapon;
+  }
+}
+
+const mango = new Warrior("mango", 1000, "alebarda");
+console.log("🚀  mango:", mango);
+mango.gainXP(1000);
+console.log("🚀  mango:", mango);
