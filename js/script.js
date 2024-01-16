@@ -864,3 +864,26 @@
 // console.log("🚀  mango:", mango);
 // mango.attack();
 // mango.gainXP(1000);
+// function createCalcFunction(n) {
+//   return function () {
+//     console.log(1000 * n);
+//   };
+// }
+
+// const calc = createCalcFunction(42);
+// calc();
+
+function bind(context, fn) {
+  return function (...args) {
+    fn.apply(context, args);
+  };
+}
+
+function logPerson() {
+  console.log(`Person: ${this.name}, ${this.age}`);
+}
+
+const person1 = { name: "Johan", age: 22 };
+const person2 = { name: "Nick", age: 100 };
+
+bind(person1, logPerson)();
