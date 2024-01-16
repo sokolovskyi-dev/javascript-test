@@ -830,25 +830,37 @@
 // const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
 // console.log("counter2", counter2);
 
-class Hero {
-  constructor(name = "hero", xp = 0) {
-    this.name = name;
-    this.xp = xp;
-  }
-  gainXP(amount) {
-    console.log(`${this.name} получает ${amount} опыта`);
-    this.xp += amount;
-  }
-}
+// class Hero {
+//   constructor(name = "hero", xp = 0) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+//   gainXP(amount) {
+//     console.log(`${this.name} получает ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
 
-class Warrior extends Hero {
-  constructor(name, xp, weapon) {
-    super(name, xp);
-    this.weapon = weapon;
-  }
-}
+// class Warrior extends Hero {
+//   constructor(name, xp, weapon) {
+//     super(name, xp);
+//     this.weapon = weapon;
+//   }
+//   attack() {
+//     console.log(`${this.name} атакует используя ${this.weapon}`);
+//   }
+// }
 
-const mango = new Warrior("mango", 1000, "alebarda");
-console.log("🚀  mango:", mango);
-mango.gainXP(1000);
-console.log("🚀  mango:", mango);
+// class Mage extends Hero {
+//   constructor(name, xp, spells) {
+//     super(name, xp);
+//     this.spells = spells;
+//   }
+// }
+
+// const mango = new Warrior("mango", 1000, "alebarda");
+// console.log("🚀  mango:", mango);
+// mango.gainXP(1000);
+// console.log("🚀  mango:", mango);
+// mango.attack();
+// mango.gainXP(1000);
