@@ -873,17 +873,19 @@
 // const calc = createCalcFunction(42);
 // calc();
 
-function bind(context, fn) {
-  return function (...args) {
-    fn.apply(context, args);
-  };
-}
+// function bind(context, fn) {
+//   return function (...args) {
+//     fn.apply(context, args);
+//   };
+// }
 
-function logPerson() {
-  console.log(`Person: ${this.name}, ${this.age}`);
-}
+// function logPerson() {
+//   console.log(`Person: ${this.name}, ${this.age}`);
+// }
 
-const person1 = { name: "Johan", age: 22 };
-const person2 = { name: "Nick", age: 100 };
+// const person1 = { name: "Johan", age: 22 };
+// const person2 = { name: "Nick", age: 100 };
 
-bind(person1, logPerson)();
+// bind(person1, logPerson)();
+
+const navItemEl = document.querySelector("li");
