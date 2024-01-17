@@ -1,0 +1,29 @@
+.magic-btn {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.magic-btn > .icon {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.site-nav-link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.site-nav-link:hover {
+  text-decoration: underline;
+}
+
+.site-nav-link-current {
+  color: tomato;
+}
