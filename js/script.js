@@ -888,4 +888,99 @@
 
 // bind(person1, logPerson)();
 
-const navItemEl = document.querySelector("li");
+// const quantity = prompt("введите количество товаров");
+// console.log("🚀  quantity:", quantity);
+
+// for (let i = 1; i <= 10; i += 1) {
+//   console.log(i);
+// }
+
+// for (let i = 1; i <= 20; i += 1) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// let sum = 0;
+// for (let i = 1; i <= 100; i += 1) {
+//   sum += i;
+//   console.log(sum);
+// }
+
+// console.log(sum);
+// let num1 = 10;
+// let num2 = 5;
+
+// for (let i = 1; i <= 10; i += 1) {
+//   let row = "";
+//   for (let j = 1; j <= 10; j += 1) {
+//     row += `${i * j}\t`;
+//   }
+//   console.log(row);
+// }
+
+// let secretNumber = Math.floor(Math.random() * 100) + 1;
+// console.log(secretNumber);
+// let attempts = 0;
+
+// function guessNumber() {
+//   let userGuess = Number(prompt("Введите число"));
+//   attempts += 1;
+
+//   if (userGuess < secretNumber) {
+//     alert("Загадочное число больше. Попробуйте еще раз");
+//     guessNumber();
+//   } else if (userGuess > secretNumber) {
+//     alert("Загадочное число Меньше. Попробуйте еще раз");
+//     guessNumber();
+//   } else if (userGuess === secretNumber) {
+//     alert(
+//       `Поздравляю. Вы угадали число ${secretNumber} за ${attempts} попыток`
+//     );
+//   } else {
+//     alert("Некорректный ввод. Пожалуйста, введите число.");
+//     guessNumber();
+//   }
+// }
+
+// guessNumber();
+
+// function calculateFactorial() {
+//   let n = parseInt(prompt("Введите число для вычисления факториала"));
+//   console.log(n);
+//   if (isNaN(n) || n < 0) {
+//     console.log("Пожалуйста введите неотрицательное целое число");
+//     return;
+//   }
+//   let factorial = 1;
+
+//   for (let i = 1; i < n; i += 1) {
+//     factorial *= i;
+//   }
+//   console.log(`Факториал числа ${n} равен ${factorial}`);
+// }
+
+// calculateFactorial();
+// function calculateFactorial() {
+//   let n = parseInt(prompt("Введите число для вычисления факториала:"));
+
+//   // Проверка корректности ввода
+//   if (isNaN(n) || n < 0) {
+//     console.log("Пожалуйста, введите неотрицательное целое число.");
+//     return;
+//   }
+
+//   // Инициализация переменной для хранения результата
+//   let factorial = 1;
+
+//   // Вычисление факториала с помощью цикла
+//   for (let i = 1; i <= n; i++) {
+//     factorial *= i;
+//   }
+
+//   // Вывод результата
+//   console.log(`Факториал числа ${n} равен ${factorial}`);
+// }
+
+// // Запуск функции
+// calculateFactorial();
