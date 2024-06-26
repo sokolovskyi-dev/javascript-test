@@ -983,4 +983,74 @@
 // }
 
 // // Запуск функции
-// calculateFactorial();
+// calculateFactorial()
+// const stars = 6;
+// let price;
+
+// if (stars === 1) {
+//   price = 20;
+// } else if (stars === 2) {
+//   price = 30;
+// } else if (stars === 3) {
+//   price = 40;
+// } else if (stars === 4) {
+//   price = 50;
+// } else if (stars === 5) {
+//   price = 60;
+// } else {
+//   console.log("Errorrrrrrr");
+// }
+// console.log(price);
+
+// switch (stars) {
+//   case 1:
+//     price = 20;
+//     break;
+
+//   case 2:
+//     price = 30;
+//     break;
+
+//   case 3:
+//     price = 40;
+//     break;
+
+//   case 4:
+//     price = 50;
+//     break;
+
+//   case 5:
+//     price = 50;
+//     break;
+
+//   default:
+//     console.log("Errorrrrrrrrrrrrrrrrrr");
+// }
+
+// console.log(price);
+
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employees = 9;
+// let totalSalary = 0;
+
+// for (let i = 1; i <= employees; i += 1) {
+//   const salary = Math.round(
+//     Math.random() * (maxSalary - minSalary) + minSalary
+//   );
+//   console.log(`ЗП работника номер ${i} - ${salary}`);
+//   totalSalary += salary;
+// }
+// console.log(totalSalary);
+
+const min = 0;
+const max = 5;
+let total = 0;
+
+for (let i = min; i <= max; i += 1) {
+  if (i % 2 === 0) {
+    total += i;
+  }
+}
+
+console.log("total:", total);
