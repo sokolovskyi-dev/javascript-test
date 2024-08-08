@@ -1042,3 +1042,41 @@
 //   totalSalary += salary;
 // }
 // console.log(totalSalary);
+
+// const friends = ["mango", "poly", "kiwi"];
+// let string = "";
+
+// for (const friend of friends) {
+//   string += friend + ",";
+// }
+
+// console.log(string.slice(0, string.length - 1));
+// const string = friends.join(", ");
+
+// console.log(string);
+const string = "JavaScript";
+// let newString = "";
+// for (const letter of string) {
+//   if (letter.toUpperCase() === letter) {
+//     newString += letter.toLowerCase();
+//   }
+//   newString += letter.toUpperCase();
+// }
+
+// console.log(newString);
+const letters = string.split("");
+let invertedString = "";
+console.log(letters);
+
+for (const letter of letters) {
+  console.log(letter);
+  if (letter === letter.toLowerCase()) {
+    console.log(letter, "-Эта буква в нижнем регистре");
+
+    invertedString += letter.toUpperCase();
+  } else {
+    invertedString += letter.toLowerCase();
+  }
+}
+
+console.log(invertedString);
