@@ -1054,7 +1054,7 @@
 // const string = friends.join(", ");
 
 // console.log(string);
-const string = "JavaScript";
+// const string = "JavaScript";
 // let newString = "";
 // for (const letter of string) {
 //   if (letter.toUpperCase() === letter) {
@@ -1064,19 +1064,91 @@ const string = "JavaScript";
 // }
 
 // console.log(newString);
-const letters = string.split("");
-let invertedString = "";
-console.log(letters);
+// const cards = ["Card-1", "Card-2", "Card-3", "Card-4", "Card-5"];
 
-for (const letter of letters) {
-  console.log(letter);
-  if (letter === letter.toLowerCase()) {
-    console.log(letter, "-Эта буква в нижнем регистре");
+// const cardToRemove = "Card-3";
+// const index = cards.indexOf(cardToRemove);
+// cards.splice(index, 1);
+// console.table(cards);
 
-    invertedString += letter.toUpperCase();
-  } else {
-    invertedString += letter.toLowerCase();
-  }
-}
+// cards.splice(1, 1, "Card-2 NEW");
 
-console.log(invertedString);
+// console.table(cards);
+// const str = "Hello world";
+// const array = str.split("");
+// console.log(array);
+// const newStr = array.join(" ");
+// console.log(newStr);
+
+// const langs = ["python", "java", "c++", "php", "ruby", "a+"];
+
+// for (let i = 0; i < langs.length; i++) {
+//   // console.log("1", langs[i][0]);
+
+//   if (langs[0] > langs[i]) {
+//     // langs.splice(0, 0, langs[i]);
+//     console.log(langs[i]);
+//     const result = langs.splice(i, 1)[0];
+//     console.log(result);
+//     langs.unshift(result);
+//   }
+// }
+
+// console.log(langs);
+// var x = 7,
+//   y = null,
+//   z = 9;
+
+// alert(z || (x && y));
+// const fnA = function () {
+//   console.log("Выполняется ф-ция A");
+//   fnB();
+// };
+
+// const fnB = function () {
+//   console.log("Выполняется ф-ция В");
+//   fnC();
+// };
+// const fnC = function () {
+//   console.log("Выполняется ф-ция C");
+//   console.log(value);
+// };
+
+// fnA();
+// fnB();
+// fnC();
+
+// const calculateTotalPrice = function (items) {
+//   console.log(items);
+
+//   let total = 0;
+
+//   for (const item of items) {
+//     total += item;
+//   }
+
+//   return total;
+// };
+
+// console.log(calculateTotalPrice([1, 2, 3, 4]));
+
+const logins = ["lijhofgibhjogif", "fjhdgfudjgfkuyjhfd", "ujihgiu"];
+
+const findLogin = function (allLogins, loginToFind) {
+  // let message = "пользователь не найден";
+
+  // for (const login of allLogins) {
+  //   if (login === loginToFind) {
+  //     message = `Пользователь ${loginToFind} Найден`;
+  //   }
+  // }
+  // return message;
+
+  return allLogins.includes(loginToFind)
+    ? `Пользователь ${loginToFind} Найден`
+    : `Пользователь ${loginToFind} не Найден`;
+};
+
+// findLogin();
+console.log(findLogin(logins, "dgfh"));
+console.log(findLogin(logins, "ujihgiu"));
