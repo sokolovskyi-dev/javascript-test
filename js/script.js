@@ -1132,23 +1132,54 @@
 
 // console.log(calculateTotalPrice([1, 2, 3, 4]));
 
-const logins = ["lijhofgibhjogif", "fjhdgfudjgfkuyjhfd", "ujihgiu"];
+// const logins = ["lijhofgibhjogif", "fjhdgfudjgfkuyjhfd", "ujihgiu"];
 
-const findLogin = function (allLogins, loginToFind) {
-  // let message = "пользователь не найден";
+// const findLogin = function (allLogins, loginToFind) {
+//   // let message = "пользователь не найден";
 
-  // for (const login of allLogins) {
-  //   if (login === loginToFind) {
-  //     message = `Пользователь ${loginToFind} Найден`;
-  //   }
-  // }
-  // return message;
+//   // for (const login of allLogins) {
+//   //   if (login === loginToFind) {
+//   //     message = `Пользователь ${loginToFind} Найден`;
+//   //   }
+//   // }
+//   // return message;
 
-  return allLogins.includes(loginToFind)
-    ? `Пользователь ${loginToFind} Найден`
-    : `Пользователь ${loginToFind} не Найден`;
+//   return allLogins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} Найден`
+//     : `Пользователь ${loginToFind} не Найден`;
+// };
+
+// // findLogin();
+// console.log(findLogin(logins, "dgfh"));
+// console.log(findLogin(logins, "ujihgiu"));
+
+// const numbers = [4, 4, 5, 9, 8, 65, 54, 56, 6, 9, 1, 0];
+// const findSmallestNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
+
+//   for (const number of numbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number;
+//     }
+//   }
+//   return smallestNumber;
+// };
+
+// console.log(findSmallestNumber([5, 6, 8, 9, 88, 3, 2, 1, 0, -2]));
+
+const changeCase = function (string) {
+  const letters = string.split("");
+  let invertedString = "";
+
+  for (const letter of letters) {
+    const isInLowerCase = letter === letter.toLowerCase();
+    invertedString += isInLowerCase
+      ? letter.toUpperCase()
+      : letter.toLowerCase();
+  }
+  return invertedString;
 };
 
-// findLogin();
-console.log(findLogin(logins, "dgfh"));
-console.log(findLogin(logins, "ujihgiu"));
+console.log(changeCase("aaaaaBBBBBB"));
+
+console.log(changeCase("WWWWWWWWWWWlll"));
