@@ -1167,19 +1167,30 @@
 
 // console.log(findSmallestNumber([5, 6, 8, 9, 88, 3, 2, 1, 0, -2]));
 
-const changeCase = function (string) {
-  const letters = string.split("");
-  let invertedString = "";
+// const changeCase = function (string) {
+//   const letters = string.split("");
+//   let invertedString = "";
 
-  for (const letter of letters) {
-    const isInLowerCase = letter === letter.toLowerCase();
-    invertedString += isInLowerCase
-      ? letter.toUpperCase()
-      : letter.toLowerCase();
-  }
-  return invertedString;
-};
+//   for (const letter of letters) {
+//     const isInLowerCase = letter === letter.toLowerCase();
+//     invertedString += isInLowerCase
+//       ? letter.toUpperCase()
+//       : letter.toLowerCase();
+//   }
+//   return invertedString;
+// };
 
-console.log(changeCase("aaaaaBBBBBB"));
+// console.log(changeCase("aaaaaBBBBBB"));
 
-console.log(changeCase("WWWWWWWWWWWlll"));
+// console.log(changeCase("WWWWWWWWWWWlll"));
+
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+
+//   console.log(`Number > than ${threshold}  : ${numbers[i]}`);
+// }
