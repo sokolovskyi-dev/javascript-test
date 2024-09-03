@@ -1194,3 +1194,109 @@
 
 //   console.log(`Number > than ${threshold}  : ${numbers[i]}`);
 // }
+// function includes(array, value) {
+//   // Change code below this line
+//   for (const item of array) {
+//     if (item === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+//   // Change code above this line
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 0));
+// const playlist = {
+//   name: "playlist",
+//   rating: 5,
+// };
+
+// console.log(playlist["rating"]);
+
+// const playlist = {
+//   name: "playlist",
+//   rating: 5,
+//   trackCount: 3,
+//   changeName(newName) {
+//     this.name = newName;
+//   },
+// };
+
+// console.log(playlist);
+// playlist.changeName("NEW NAME");
+// console.log(playlist);
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+
+// // const keys = Object.keys(feedback);
+// // console.log(keys);
+
+// // for (const key of keys) {
+// //   console.log(feedback[key]);
+// // }
+
+// let totalFeedback = 0;
+
+// const values = Object.values(feedback);
+// console.log(values);
+
+// for (const value of values) {
+//   console.log(value);
+//   totalFeedback += value;
+// }
+// console.log(totalFeedback);
+const friends = [
+  { name: "John", online: false },
+  { name: "Kiwi", online: true },
+  { name: "Poly", online: true },
+  { name: "Ajax", online: false },
+];
+
+console.table(friends);
+
+// for (const friend of friends) {
+//   console.log(friend.name);
+// // }
+// const findFriendByName = function (allFriends, name) {
+//   for (const friend of allFriends) {
+//     if (friend.name === name) {
+//       return `${name} was find`;
+//     }
+//   }
+//   return "error";
+// };
+
+// const getAllNames = function (allfriends) {
+//   const names = [];
+//   for (const friend of allfriends) {
+//     console.log(friend.name);
+//     names.push(friend.name);
+//   }
+//   return names;
+// };
+// console.log(getAllNames(friends));
+
+// const getOnlineFriends = function (allFriends) {
+//   const onlineFriends = [];
+//   for (const friend of allFriends) {
+//     if (friend.online) {
+//       onlineFriends.push(friend);
+//     }
+//   }
+//   return onlineFriends;
+// };
+
+console.log(getOnlineFriends(friends));
+
+const getFriendsByOnlineStatus = function (allFriends) {
+  const friendsByStatus = {
+    online: [],
+    offline: [],
+  };
+};
+
+console.log(getFriendsByOnlineStatus(friends));
