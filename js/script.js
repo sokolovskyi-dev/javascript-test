@@ -1249,14 +1249,15 @@
 //   totalFeedback += value;
 // }
 // console.log(totalFeedback);
-const friends = [
-  { name: "John", online: false },
-  { name: "Kiwi", online: true },
-  { name: "Poly", online: true },
-  { name: "Ajax", online: false },
-];
+// const friends = [
+//   { name: "John", online: true },
+//   { name: "Kiwi", online: true },
+//   { name: "Poly", online: true },
+//   { name: "Ajax", online: false },
+// ];
 
-console.table(friends);
+// console.table(friends);
+// console.log;
 
 // for (const friend of friends) {
 //   console.log(friend.name);
@@ -1290,13 +1291,53 @@ console.table(friends);
 //   return onlineFriends;
 // };
 
-console.log(getOnlineFriends(friends));
+// // console.log(getOnlineFriends(friends));
 
-const getFriendsByOnlineStatus = function (allFriends) {
-  const friendsByStatus = {
-    online: [],
-    offline: [],
-  };
+// const getFriendsByOnlineStatus = function (allFriends) {
+//   const friendsByStatus = {
+//     online: [],
+//     offline: [],
+//   };
+
+//   for (const friend of allFriends) {
+//     // if (friend.online) {
+//     //   friendsByStatus.online.push(friend);
+//     //   continue;
+//     // }
+//     // friendsByStatus.offline.push(friend);
+//     // friend.online
+//     //   ? friendsByStatus.online.push(friend)
+//     //   : friendsByStatus.offline.push(friend);
+//     const key = friend.online ? "online" : "offline";
+//     friendsByStatus[key].push(friend);
+//   }
+
+//   return friendsByStatus;
+// };
+
+// console.log(getFriendsByOnlineStatus(friends));
+
+// const friendsByStatus = {
+//   online: [1, 2, 3, 4, 5],
+//   offline: [6, 7, 8, 9],][]][]
+// };
+
+// console.log(friendsByStatus["online"]);
+
+const cart = {
+  items: [],
+  getItems() {},
+  add(product) {},
+  remove(productName) {},
+  clear() {},
+  countTotalPrice() {},
+  increaseQuantity(productName) {},
+  decreaseQuantity(productName) {},
 };
 
-console.log(getFriendsByOnlineStatus(friends));
+cart.add({ name: "🍎", price: 50 });
+cart.add({ name: "🍇", price: 60 });
+cart.add({ name: "🍈", price: 70 });
+cart.add({ name: "🍉", price: 100 });
+
+console.log(cart);
