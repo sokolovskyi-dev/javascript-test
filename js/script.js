@@ -1323,6 +1323,11 @@
 // };
 
 // console.log(friendsByStatus["online"]);
+//
+//
+//
+//
+//
 
 const cart = {
   items: [],
@@ -1340,4 +1345,7 @@ cart.add({ name: "🍇", price: 60 });
 cart.add({ name: "🍈", price: 70 });
 cart.add({ name: "🍉", price: 100 });
 
-console.log(cart);
+//
+//
+//
+//
