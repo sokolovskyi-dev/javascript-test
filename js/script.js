@@ -1331,19 +1331,39 @@
 
 const cart = {
   items: [],
-  getItems() {},
-  add(product) {},
-  remove(productName) {},
+  getItems() {
+    return this.items;
+  },
+  add(product) {
+    this.items.push(product);
+  },
+  remove(productName) {
+    const { items } = this;
+
+    for (let i = 0; i < items.length; i += 1) {
+      const { name } = items[i];
+
+      if (name === productName) {
+        items.splice(i, 1);
+      }
+    }
+  },
   clear() {},
   countTotalPrice() {},
   increaseQuantity(productName) {},
   decreaseQuantity(productName) {},
 };
 
+console.table(cart.getItems());
+
 cart.add({ name: "🍎", price: 50 });
 cart.add({ name: "🍇", price: 60 });
 cart.add({ name: "🍈", price: 70 });
 cart.add({ name: "🍉", price: 100 });
+console.table(cart.getItems());
+
+cart.remove("🍎");
+console.table(cart.getItems());
 
 //
 //
