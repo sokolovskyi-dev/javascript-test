@@ -1329,41 +1329,73 @@
 //
 //
 
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
-  },
-  add(product) {
-    this.items.push(product);
-  },
-  remove(productName) {
-    const { items } = this;
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     for (const item of this.items) {
+//       if (item.name === product.name) {
+//         console.log("Такой продукт уже есть", product.name);
+//         item.quantity += 1;
+//         return;
+//       }
+//     }
 
-    for (let i = 0; i < items.length; i += 1) {
-      const { name } = items[i];
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     };
 
-      if (name === productName) {
-        items.splice(i, 1);
-      }
-    }
-  },
-  clear() {},
-  countTotalPrice() {},
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
-};
+//     this.items.push(newProduct);
+//   },
+//   remove(productName) {
+//     const { items } = this;
 
-console.table(cart.getItems());
+//     for (let i = 0; i < items.length; i += 1) {
+//       const { name } = items[i];
 
-cart.add({ name: "🍎", price: 50 });
-cart.add({ name: "🍇", price: 60 });
-cart.add({ name: "🍈", price: 70 });
-cart.add({ name: "🍉", price: 100 });
-console.table(cart.getItems());
+//       if (name === productName) {
+//         items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//     const { items } = this;
+//     let total = 0;
 
-cart.remove("🍎");
-console.table(cart.getItems());
+//     for (const { price, quantity } of items) {
+//       total += price * quantity;
+//     }
+//     return total;
+//   },
+//   increaseQuantity(productName) {},
+//   decreaseQuantity(productName) {},
+// };
+
+// console.table(cart.getItems());
+
+// cart.add({ name: "🍎", price: 50 });
+// cart.add({ name: "🍎", price: 50 });
+// cart.add({ name: "🍇", price: 60 });
+// cart.add({ name: "🍈", price: 70 });
+// cart.add({ name: "🍉", price: 100 });
+// cart.add({ name: "🍉", price: 100 });
+// cart.add({ name: "🍉", price: 100 });
+
+// console.table(cart.getItems());
+
+// console.log("Total : ", cart.countTotalPrice());
+
+// cart.remove("🍇");
+// console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
 
 //
 //
