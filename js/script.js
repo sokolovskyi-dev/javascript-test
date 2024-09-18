@@ -1401,3 +1401,70 @@
 //
 //
 //
+// const user = {
+//   name: "Artem",
+//   age: 28,
+//   languages: {
+//     html: false,
+//     css: false,
+//     js: true,
+//   },
+//   sayHello() {
+//     console.log(`My name is ${this.name}`);
+//   },
+//   iknow() {
+//     const keys = Object.keys(this.languages);
+//     console.log(keys);
+//   },
+// };
+
+// const user2 = Object.create(user);
+// user2.name = "Den";
+
+// // user2.sayHello();
+// // user.sayHello();
+// user.iknow();
+
+// const user = {
+//   name: "Artem",
+//   age: 28,
+//   hobby: "html",
+//   premium: true,
+// };
+
+// user.mood = "happy";
+// user["premium"] = false;
+// user.hobby = "skydiving";
+// console.log(user);
+
+// const keys = Object.keys(user);
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(user[key]);
+// }
+const Transactions = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+Object.freeze(Transactions);
+
+const account = {
+  balance: 0,
+  transactions: [],
+  createTransaction(amount, type) {
+    return {
+      id: Date.now(),
+      amount,
+      type,
+    };
+  },
+  deposit(amount) {
+    const item = this.createTransaction(amount, Transactions.DEPOSIT);
+    console.log(item);
+  },
+};
+
+console.log(account.createTransaction(1000, "deposit"));
+account.deposit(-1000);
