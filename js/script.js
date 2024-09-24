@@ -1514,14 +1514,30 @@
 // // account.deposit(-1000);
 // console.log(account.getTransactionTotal(Transactions.WITHDRAW));
 
-function countup(n) {
-  if (n < 1) {
-    return [];
-  } else {
-    const countArray = countup(n - 1);
-    countArray.push(n);
-    return countArray;
-  }
+// function countup(n) {
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const countArray = countup(n - 1);
+//     countArray.push(n);
+//     return countArray;
+//   }
+// }
+
+// console.log(countup(5));
+const character = "#";
+const count = 8;
+const rows = [];
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(character.repeat(i));
+}
+console.log("rows", rows);
+
+let result = "";
+
+for (const row of rows) {
+  result = result + "\n" + row;
 }
 
-console.log(countup(5));
+console.log(result);
