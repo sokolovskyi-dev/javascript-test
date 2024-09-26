@@ -1589,19 +1589,19 @@
 // function generateId() {
 //   return "_" + Math.random().toString(36).substr(2, 9);
 // }
-function transformUserName({ firstName, lastName, ...props }) {
-  return {
-    fullName: `${firstName} ${lastName}`,
-    ...props,
-  };
-}
+// function transformUserName({ firstName, lastName, ...props }) {
+//   return {
+//     fullName: `${firstName} ${lastName}`,
+//     ...props,
+//   };
+// }
 
-console.log(
-  transformUserName({
-    id: 1,
-    firstName: "Jacob",
-    lastName: "Mercer",
-    email: "mer@mail.com",
-    friendCount: 40,
-  })
-);
+// console.log(
+//   transformUserName({
+//     id: 1,
+//     firstName: "Jacob",
+//     lastName: "Mercer",
+//     email: "mer@mail.com",
+//     friendCount: 40,
+//   })
+// );
