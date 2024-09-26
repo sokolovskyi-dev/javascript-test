@@ -1561,8 +1561,47 @@
 //   rest[i] *= first;
 // }
 // console.log(rest);
-function foo(...args) {
-  console.log(args);
+
+// function createContact(partialContact) {
+//   return {
+//     id: generateId(),
+//     createtAt: new Date(),
+//     list: "default",
+//     ...partialContact,
+//   };
+// }
+
+// console.log(
+//   createContact({
+//     name: "Mango",
+//     email: "mango@gmail.com",
+//     list: "friends",
+//   })
+// );
+
+// console.log(
+//   createContact({
+//     name: "Poly",
+//     email: "poly@gmail.com",
+//   })
+// );
+
+// function generateId() {
+//   return "_" + Math.random().toString(36).substr(2, 9);
+// }
+function transformUserName({ firstName, lastName, ...props }) {
+  return {
+    fullName: `${firstName} ${lastName}`,
+    ...props,
+  };
 }
 
-foo(1, 2, 3, 4, 5, 6);
+console.log(
+  transformUserName({
+    id: 1,
+    firstName: "Jacob",
+    lastName: "Mercer",
+    email: "mer@mail.com",
+    friendCount: 40,
+  })
+);
