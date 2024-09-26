@@ -1552,3 +1552,17 @@
 //
 //
 //
+// const arr1 = [2, 3, 14, 45, 16, 57];
+// const [first, ...rest] = arr1;
+// console.log(first);
+// console.log(rest);
+
+// for (let i = 0; i < rest.length; i += 1) {
+//   rest[i] *= first;
+// }
+// console.log(rest);
+function foo(...args) {
+  console.log(args);
+}
+
+foo(1, 2, 3, 4, 5, 6);
