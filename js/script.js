@@ -1605,3 +1605,44 @@
 //     friendCount: 40,
 //   })
 // );
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   // Change code below this line
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+
+//   // Change code above this line
+// }
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getProductPrice(productName) {
+  // Change code below this line
+  for (const product of products) {
+    if (product.name === productName) {
+      return product.price;
+    }
+  }
+
+  return null;
+  // Change code above this line
+}
+
+console.log(getProductPrice("Grip"));
