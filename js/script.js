@@ -1523,29 +1523,16 @@
 //     return countArray;
 //   }
 // }
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// Change code below this line
+function calculateMeanTemperature(forecast) {
+  const { todayLow, todayHigh, tomorrowLow, tomorrowHigh } = forecast;
 
-function getAllPropValues(propName) {
-  // Change code below this line
-  const values = [];
-  for (const product of products) {
-    console.log(product);
-    const keys = Object.keys(product);
-    console.log(keys);
-    for (const key of keys) {
-      console.log(key);
-      if (key === propName) {
-        values.push(product[key]);
-        console.log(product[key]);
-      }
-    }
-  }
-  return values;
   // Change code above this line
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 }
-console.log(getAllPropValues("quantity"));
+console.log(
+  calculateMeanTemperature({
+    today: { low: 37, high: 40 },
+    tomorrow: { low: 33, high: 38 },
+  })
+);
