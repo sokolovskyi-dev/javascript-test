@@ -1523,109 +1523,6 @@
 //     return countArray;
 //   }
 // }
-
-// console.log(countup(5));
-//
-//
-//
-//
-//
-//
-// const character = "#";
-// const count = 8;
-// const rows = [];
-
-// for (let i = 0; i < count; i = i + 1) {
-//   rows.push(character.repeat(i));
-// }
-// console.log("rows", rows);
-
-// let result = "";
-
-// for (const row of rows) {
-//   result = result + "\n" + row;
-// }
-
-// console.log(result);
-//
-//
-//
-//
-//
-// const arr1 = [2, 3, 14, 45, 16, 57];
-// const [first, ...rest] = arr1;
-// console.log(first);
-// console.log(rest);
-
-// for (let i = 0; i < rest.length; i += 1) {
-//   rest[i] *= first;
-// }
-// console.log(rest);
-
-// function createContact(partialContact) {
-//   return {
-//     id: generateId(),
-//     createtAt: new Date(),
-//     list: "default",
-//     ...partialContact,
-//   };
-// }
-
-// console.log(
-//   createContact({
-//     name: "Mango",
-//     email: "mango@gmail.com",
-//     list: "friends",
-//   })
-// );
-
-// console.log(
-//   createContact({
-//     name: "Poly",
-//     email: "poly@gmail.com",
-//   })
-// );
-
-// function generateId() {
-//   return "_" + Math.random().toString(36).substr(2, 9);
-// }
-// function transformUserName({ firstName, lastName, ...props }) {
-//   return {
-//     fullName: `${firstName} ${lastName}`,
-//     ...props,
-//   };
-// }
-
-// console.log(
-//   transformUserName({
-//     id: 1,
-//     firstName: "Jacob",
-//     lastName: "Mercer",
-//     email: "mer@mail.com",
-//     friendCount: 40,
-//   })
-// );
-
-// const keys = [];
-// const values = [];
-// const advert = {
-//   service: "apt",
-// };
-// const apartment = Object.create(advert);
-// apartment.descr = "Spacious apartment in the city center";
-// apartment.rating = 4;
-// apartment.price = 2153;
-
-// for (const key in apartment) {
-//   // Change code below this line
-//   if (apartment.hasOwnProperty(key)) {
-//     keys.push(key);
-//     values.push(apartment[key]);
-//   }
-
-//   // Change code above this line
-// }
-
 const products = [
   { name: "Radar", price: 1300, quantity: 4 },
   { name: "Scanner", price: 2700, quantity: 3 },
@@ -1633,16 +1530,22 @@ const products = [
   { name: "Grip", price: 1200, quantity: 9 },
 ];
 
-function getProductPrice(productName) {
+function getAllPropValues(propName) {
   // Change code below this line
+  const values = [];
   for (const product of products) {
-    if (product.name === productName) {
-      return product.price;
+    console.log(product);
+    const keys = Object.keys(product);
+    console.log(keys);
+    for (const key of keys) {
+      console.log(key);
+      if (key === propName) {
+        values.push(product[key]);
+        console.log(product[key]);
+      }
     }
   }
-
-  return null;
+  return values;
   // Change code above this line
 }
-
-console.log(getProductPrice("Grip"));
+console.log(getAllPropValues("quantity"));
