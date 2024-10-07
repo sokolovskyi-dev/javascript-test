@@ -1525,14 +1525,36 @@
 // }
 // Change code below this line
 
-const makeSheff = function (name) {
-  function makeDish(dish) {
-    console.log(`${name} - ${dish}`);
-  }
-  return makeDish;
+// const makeSheff = function (name) {
+//   function makeDish(dish) {
+//     console.log(`${name} - ${dish}`);
+//   }
+//   return makeDish;
+// };
+
+// const mango = makeSheff("Mango");
+
+// mango("cake");
+// console.dir(mango);
+
+const floatingPoint = 3.464464;
+const someInt = Math.round(floatingPoint);
+console.log(someInt);
+const withDecimals = Number(floatingPoint.toFixed(2));
+
+console.log(withDecimals);
+
+// const rounder = function (number, places) {
+//   return Number(number.toFixed(places));
+// };
+
+// console.log(rounder(5.3695865, 2));
+
+const rounder = function (places) {
+  return function (number) {
+    return Number(number.toFixed(places));
+  };
 };
 
-const mango = makeSheff("Mango");
-
-mango("cake");
-console.dir(mango);
+const rounder2 = rounder(2);
+const rounder3 = rounder(3);
