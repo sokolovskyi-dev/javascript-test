@@ -1563,6 +1563,11 @@
 // numbers.forEach(function (number) {
 //   console.log("number :>> ", number);
 // });
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const filtered = numbers.filter((number) => number > 5);
-console.log(filtered);
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const total = numbers.reduce((acc, number) => acc + number, 0);
+// console.log(total);
+
+// const numbers = [9, 5, 6, 8, 2, 17, 3, 150, 1];
+// numbers.sort((a, b) => a - b);
+// console.log(numbers);
