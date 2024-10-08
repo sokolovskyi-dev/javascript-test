@@ -1558,8 +1558,11 @@
 
 // const rounder2 = rounder(2);
 // const rounder3 = rounder(3);
-const numbers = [1, 2, 54, 89674, , 74968, 47];
+// const numbers = [1, 2, 54, 89674, , 74968, 47];
 
-numbers.forEach(function (number) {
-  console.log("number :>> ", number);
-});
+// numbers.forEach(function (number) {
+//   console.log("number :>> ", number);
+// });
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const filtered = numbers.filter((number) => number > 5);
+console.log(filtered);
