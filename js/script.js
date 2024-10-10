@@ -1571,3 +1571,4 @@
 // const numbers = [9, 5, 6, 8, 2, 17, 3, 150, 1];
 // numbers.sort((a, b) => a - b);
 // console.log(numbers);
+const arr = [1, 2, 3, 4, 5, 6, 71];
