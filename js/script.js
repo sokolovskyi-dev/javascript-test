@@ -1571,4 +1571,9 @@
 // const numbers = [9, 5, 6, 8, 2, 17, 3, 150, 1];
 // numbers.sort((a, b) => a - b);
 // console.log(numbers);
-const arr = [1, 2, 3, 4, 5, 6, 71];
+const str = "ljhgshgshg;bjgdfihj[dpojh[doph]dohid]ophidpoi";
+const result = str.split("").reduce((acc, item) => {
+  acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
+  return acc;
+}, {});
+console.log("result :>> ", result);
