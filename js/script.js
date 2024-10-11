@@ -1571,9 +1571,53 @@
 // const numbers = [9, 5, 6, 8, 2, 17, 3, 150, 1];
 // numbers.sort((a, b) => a - b);
 // console.log(numbers);
-const str = "ljhgshgshg;bjgdfihj[dpojh[doph]dohid]ophidpoi";
-const result = str.split("").reduce((acc, item) => {
-  acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
-  return acc;
-}, {});
-console.log("result :>> ", result);
+// const str = "ljhgshgshg;bjgdfihj[dpojh[doph]dohid]ophidpoi";
+// const result = str.split("").reduce((acc, item) => {
+//   acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
+//   return acc;
+// }, {});
+// console.log("result :>> ", result);
+
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     if (!this.pizzas.includes(pizzaName)) {
+//       console.log(
+//         onError(`There is no pizza with a name ${pizzaName} in the assortment`)
+//       );
+//     } else {
+//       console.log(onSuccess(pizzaName));
+//     }
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+function changeEven(numbers, value) {
+  // Change code below this line
+
+  const newNumbers = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 === 0) {
+      newNumbers.push(numbers[i] + value);
+    } else {
+      newNumbers.push(numbers[i]);
+    }
+  }
+  return newNumbers;
+  // Change code above this line
+}
