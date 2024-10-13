@@ -1790,3 +1790,9 @@ const getUserWithEmail = (users, email) => {
 };
 
 console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
+
+const calculateTotalBalance = (users) => {
+  return users.reduce((total, { balance }) => {
+    return total + balance;
+  }, 0);
+};
