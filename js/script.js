@@ -1933,11 +1933,20 @@
 
 // console.log(getTotalBalanceByGender(users, "male"));
 
-const objC = {
-  z: 5,
+// const objC = {
+//   z: 5,
+// };
+
+// const objB = Object.create(objC);
+
+// console.log(objB);
+// console.log(objB.z);
+
+const Car = function () {
+  console.log(this);
+  this.a = 555;
 };
 
-const objB = Object.create(objC);
+const myCar = new Car();
 
-console.log(objB);
-console.log(objB.z);
+console.log(myCar);
