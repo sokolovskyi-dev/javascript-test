@@ -1963,56 +1963,66 @@
 // const mango = new User({ email: "mango@mail.com", password: 111111 });
 // mango.changeEmail("65465465");
 // console.log("mango: ", mango);
-const CounterPlugin = function ({
-  rootSelector,
-  initialValue = 0,
-  step = 1,
-} = {}) {
-  this._value = initialValue;
-  this.step = step;
-  this._refs = this._getRefs(rootSelector);
-  this._bindEvents();
-  this.updateValueUI();
-};
 
-CounterPlugin.prototype._getRefs = function (rootSelector) {
-  const refs = {};
-  refs.container = document.querySelector(rootSelector);
-  refs.incrementBtn = refs.container.querySelector("[data-increment");
-  refs.decrementBtn = refs.container.querySelector("[data-decrement");
-  refs.value = refs.container.querySelector("[data-value]");
+// const CounterPlugin = function ({
+//   rootSelector,
+//   initialValue = 0,
+//   step = 1,
+// } = {}) {
+//   this._value = initialValue;
+//   this.step = step;
+//   this._refs = this._getRefs(rootSelector);
+//   this._bindEvents();
+//   this.updateValueUI();
+// };
 
-  return refs;
-};
+// CounterPlugin.prototype._getRefs = function (rootSelector) {
+//   const refs = {};
+//   refs.container = document.querySelector(rootSelector);
+//   refs.incrementBtn = refs.container.querySelector("[data-increment");
+//   refs.decrementBtn = refs.container.querySelector("[data-decrement");
+//   refs.value = refs.container.querySelector("[data-value]");
 
-CounterPlugin.prototype._bindEvents = function () {
-  this._refs.incrementBtn.addEventListener("click", () => {
-    this.increment();
-    this.updateValueUI();
-  });
+//   return refs;
+// };
 
-  this._refs.decrementBtn.addEventListener("click", () => {
-    this.decrement();
-    this.updateValueUI();
-  });
-};
+// CounterPlugin.prototype._bindEvents = function () {
+//   this._refs.incrementBtn.addEventListener("click", () => {
+//     this.increment();
+//     this.updateValueUI();
+//   });
 
-CounterPlugin.prototype.updateValueUI = function () {
-  this._refs.value.textContent = this._value;
-};
+//   this._refs.decrementBtn.addEventListener("click", () => {
+//     this.decrement();
+//     this.updateValueUI();
+//   });
+// };
 
-CounterPlugin.prototype.increment = function () {
-  this._value += this.step;
-};
+// CounterPlugin.prototype.updateValueUI = function () {
+//   this._refs.value.textContent = this._value;
+// };
 
-CounterPlugin.prototype.decrement = function () {
-  this._value -= this.step;
-};
+// CounterPlugin.prototype.increment = function () {
+//   this._value += this.step;
+// };
 
-const counter1 = new CounterPlugin({
-  rootSelector: "#counter-1",
-  step: 10,
-  initialValue: 50,
-});
+// CounterPlugin.prototype.decrement = function () {
+//   this._value -= this.step;
+// };
 
-const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
+// const counter1 = new CounterPlugin({
+//   rootSelector: "#counter-1",
+//   step: 10,
+//   initialValue: 50,
+// });
+
+// const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
+
+class Car1 {
+  constructor() {
+    console.log("выполняется конструктор");
+  }
+}
+// console.dir(Car1);
+const carInstance = new Car1();
+// console.log("🚀  carInstance:", carInstance);
