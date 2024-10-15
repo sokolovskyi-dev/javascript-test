@@ -1942,11 +1942,47 @@
 // console.log(objB);
 // console.log(objB.z);
 
-const Car = function () {
-  console.log(this);
-  this.a = 555;
+// const Car = function () {
+//   console.log(this);
+//   this.a = 555;
+// };
+
+// const myCar = new Car();
+
+// console.log(myCar);
+
+// const User = function ({ email, password } = {}) {
+//   this.email = email;
+//   this.password = password;
+// };
+
+// User.prototype.changeEmail = function (newEmail) {
+//   this.email = newEmail;
+// };
+
+// const mango = new User({ email: "mango@mail.com", password: 111111 });
+// mango.changeEmail("65465465");
+// console.log("mango: ", mango);
+const CounterPlugin = function ({
+  rootSelector,
+  initialValue = 0,
+  step = 1,
+} = {}) {
+  this.rootSelector = rootSelector;
+  this._value = initialValue;
+  this.step = step;
 };
 
-const myCar = new Car();
+CounterPlugin.prototype.increment = function () {
+  this._value += this.step;
+};
 
-console.log(myCar);
+CounterPlugin.prototype.decrement = function () {
+  this._value -= this.step;
+};
+
+const counter1 = new CounterPlugin({ rootSelector: "#counter-1", step: 10 });
+console.log("🚀  counter1:", counter1);
+
+const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
+console.log("🚀  counter2:", counter2);
