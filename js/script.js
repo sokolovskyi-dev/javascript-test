@@ -2017,12 +2017,3 @@
 // });
 
 // const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
-
-class Car1 {
-  constructor() {
-    console.log("выполняется конструктор");
-  }
-}
-// console.dir(Car1);
-const carInstance = new Car1();
-// console.log("🚀  carInstance:", carInstance);
