@@ -2017,37 +2017,34 @@
 // });
 
 // const counter2 = new CounterPlugin({ rootSelector: "#counter-2", step: 2 });
-<<<<<<< Updated upstream
-=======
 
-class Hero {
-  constructor(name = "hero", xp = 0) {
-    this.name = name;
-    this.xp = xp;
-  }
+// class Hero {
+//   constructor(name = "hero", xp = 0) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
 
-  gainXP(amount) {
-    console.log(`${this.name} получает ${amount} опыта`);
-    this.xp += amount;
-  }
-}
+//   gainXP(amount) {
+//     console.log(`${this.name} получает ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
 
-class Warrior extends Hero {
-  constructor(name, xp, weapon) {
-    super(name, xp);
-    this.weapon = weapon;
-  }
+// class Warrior extends Hero {
+//   constructor(name, xp, weapon) {
+//     super(name, xp);
+//     this.weapon = weapon;
+//   }
 
-  attack() {
-    console.log(`${this.name} атакует используя ${this.weapon}`);
-  }
-}
-const mango = new Warrior("mango", 1000, "alebarda");
-console.log("🚀  mango:", mango);
+//   attack() {
+//     console.log(`${this.name} атакует используя ${this.weapon}`);
+//   }
+// }
+// const mango = new Warrior("mango", 1000, "alebarda");
+// console.log("🚀  mango:", mango);
 
-console.log("Warrior.prototype", Warrior.prototype);
-console.log("Hero.prototype", Hero.prototype);
-console.log(Warrior.prototype);
-mango.attack();
-mango.gainXP(1000);
->>>>>>> Stashed changes
+// console.log("Warrior.prototype", Warrior.prototype);
+// console.log("Hero.prototype", Hero.prototype);
+// console.log(Warrior.prototype);
+// mango.attack();
+// mango.gainXP(1000);
