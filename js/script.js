@@ -2066,6 +2066,8 @@ class Component {
 class Box extends Component {
   constructor(options) {
     super(options.selector);
+    this.$el.style.width = this.$el.style.height = options.size + "px";
+    this.$el.style.background = options.color;
   }
 }
 
@@ -2074,3 +2076,18 @@ const box1 = new Box({
   size: 100,
   color: "red",
 });
+
+box1.hide();
+box1.show();
+
+const box2 = new Box({
+  selector: "#box2",
+  size: 120,
+  color: "blue",
+});
+
+class circle extends Box {
+  constructor(options) {
+    super(options);
+  }
+}
