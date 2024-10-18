@@ -2092,17 +2092,76 @@
 //   }
 // }
 
-class Storage {
-  constructor(arr) {
-    this.items = [...arr];
-  }
-  removeItem(itemToRemove) {
-    const idx = this.items.indexOf(itemToRemove);
-    this.items.splice(idx, 1);
-  }
-}
+// class Storage {
+//   constructor(arr) {
+//     this.items = [...arr];
+//   }
+//   removeItem(itemToRemove) {
+//     const idx = this.items.indexOf(itemToRemove);
+//     this.items.splice(idx, 1);
+//   }
+// }
 
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
 
-storage.removeItem("Prolonger");
-console.log("🚀  storage:", storage);
+// storage.removeItem("Prolonger");
+// console.log("🚀  storage:", storage);
+// class StringBuilder {
+//   constructor(initialValue) {
+//     this.value = initialValue;
+//   }
+//   getValue() {
+//     return this.value;
+//   }
+
+//   padEnd(str) {
+//     return this.value + str;
+//   }
+
+//   padStart(str) {
+//     return str + this.value;
+//   }
+
+//   padBoth(str) {
+//     return str + this.value + str;
+//   }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log("🚀  builder:", builder);
+
+// console.log(builder.getValue()); // "."
+
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+// const str = "ggg";
+// const str1 = "111";
+// console.log(str + str1);
+// class Car {
+//   static #MAX_PRICE = 50000;
+
+//   // Change code below this line
+//   static checkPrice(price) {
+//     if (price > Car.#MAX_PRICE) {
+//       return "Error! Price exceeds the maximum";
+//     }
+//   }
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// console.log("🚀  audi:", audi);
+// const bmw = new Car({ price: 64000 });
+// console.log("🚀  bmw:", bmw);
+
+// console.log(Car.checkPrice(64000));
