@@ -2092,6 +2092,17 @@
 //   }
 // }
 
-class Animal {
-  constructor(options) {}
+class Storage {
+  constructor(arr) {
+    this.items = [...arr];
+  }
+  removeItem(itemToRemove) {
+    const idx = this.items.indexOf(itemToRemove);
+    this.items.splice(idx, 1);
+  }
 }
+
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+
+storage.removeItem("Prolonger");
+console.log("🚀  storage:", storage);
