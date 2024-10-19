@@ -2166,4 +2166,19 @@
 
 // console.log(Car.checkPrice(64000));
 const magicBtn = document.querySelector(".js-magic-btn");
-console.log("🚀  magicBtn:", magicBtn);
+// console.log("🚀  magicBtn:", magicBtn);
+
+// magicBtn.addEventListener("click", () => {
+//   console.log("это клик по кнопке");
+// });
+
+const imageEl = document.querySelector(".hero_img");
+const heroTitleEl = document.querySelector(".hero_title");
+console.log("🚀  heroTitleEl:", heroTitleEl.textContent);
+
+magicBtn.addEventListener("click", () => {
+  console.log("hello");
+  heroTitleEl.textContent = "Я сладкий пирожочек";
+  imageEl.src =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NLAKrR6mUnMW6tMRNBkzO9qqNh-GTXCQv64oH4HMPq4m4KIZ1NZaT8BEVs942KgboFY&usqp=CAU";
+});
