@@ -2174,11 +2174,24 @@ const magicBtn = document.querySelector(".js-magic-btn");
 
 const imageEl = document.querySelector(".hero_img");
 const heroTitleEl = document.querySelector(".hero_title");
-console.log("🚀  heroTitleEl:", heroTitleEl.textContent);
+
+const navEl = document.querySelector(".site-nav");
+
+navEl.classList.add("super-cool");
 
 magicBtn.addEventListener("click", () => {
-  console.log("hello");
+  //   navEl.classlist.toggle("wwwwwwwwwwwwww");
   heroTitleEl.textContent = "Я сладкий пирожочек";
   imageEl.src =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NLAKrR6mUnMW6tMRNBkzO9qqNh-GTXCQv64oH4HMPq4m4KIZ1NZaT8BEVs942KgboFY&usqp=CAU";
+  navEl.classList.toggle("dklgjdo");
 });
+
+const currentPafeUrl = "/portfolio";
+
+const linkEl = document.querySelector(
+  `.site-nav-link[href='${currentPafeUrl}']`
+);
+
+console.log(linkEl);
+linkEl.classList.add("site-nav-link-current");
