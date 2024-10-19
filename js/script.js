@@ -2165,3 +2165,5 @@
 // console.log("🚀  bmw:", bmw);
 
 // console.log(Car.checkPrice(64000));
+const magicBtn = document.querySelector(".js-magic-btn");
+console.log("🚀  magicBtn:", magicBtn);
