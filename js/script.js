@@ -2193,5 +2193,4 @@ const linkEl = document.querySelector(
   `.site-nav-link[href='${currentPafeUrl}']`
 );
 
-console.log(linkEl);
 linkEl.classList.add("site-nav-link-current");
