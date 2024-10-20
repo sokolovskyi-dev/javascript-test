@@ -2232,15 +2232,6 @@ const elements = makeColorPickerOptions(colorPickerOptions);
 
 colorPickerContainerEl.append(...elements);
 
-const product = {
-  name: "Servoprivody",
-  description:
-    "nhgkjshg  hfdjgh ldgkhsl hgs skjdgh slgkj sdlg jhsdkjgh dhg dkhg jsldkgj hdhgj lkdjshkdjhkdjhg ",
-  price: 2000,
-  available: true,
-  cnSale: true,
-};
-
 {
   /* <article class="product">
     <h2 class="product name">Название</h2>
@@ -2249,19 +2240,39 @@ const product = {
 </article> */
 }
 
-const productEl = document.createElement("article");
-productEl.classList.add("product");
+//
+//
+//
+//
+//
+//
+const makeProductCard = ({ name, description, price }) => {
+  const productEl = document.createElement("article");
+  productEl.classList.add("product");
 
-const nameEl = document.createElement("h2");
-nameEl.textContent = product.name;
-nameEl.classList.add("product-name");
+  const nameEl = document.createElement("h2");
+  nameEl.textContent = name;
+  nameEl.classList.add("product-name");
 
-const descrEl = document.createElement("p");
-descrEl.textContent = product.description;
-descrEl.classList.add("product-descr");
+  const descrEl = document.createElement("p");
+  descrEl.textContent = description;
+  descrEl.classList.add("product-descr");
 
-const priceEl = document.createElement("p");
-priceEl.textContent = `Price : ${product.price}`;
-priceEl.classList.add("product-price");
+  const priceEl = document.createElement("p");
+  priceEl.textContent = `Price : ${price}`;
+  priceEl.classList.add("product-price");
 
-productEl.append(nameEl, descrEl, priceEl);
+  productEl.append(nameEl, descrEl, priceEl);
+
+  return productEl;
+};
+
+console.log(makeProductCard(products[3]));
+
+const elements1 = products.map(makeProductCard);
+console.log("🚀  elements1:", elements1);
+
+const productsEl = document.querySelector(".js-products");
+productsEl.append(...elements1);
+
+console.log("🚀  productsEl:", productsEl);
