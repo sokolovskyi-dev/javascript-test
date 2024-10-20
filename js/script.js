@@ -1,4 +1,4 @@
-import products from "./data/products.js";
+// import products from "./data/products.js";
 
 // "use strict";
 
@@ -2167,45 +2167,45 @@ import products from "./data/products.js";
 // console.log("🚀  bmw:", bmw);
 
 // console.log(Car.checkPrice(64000));
-const magicBtn = document.querySelector(".js-magic-btn");
+// const magicBtn = document.querySelector(".js-magic-btn");
 // console.log("🚀  magicBtn:", magicBtn);
 
 // magicBtn.addEventListener("click", () => {
 //   console.log("это клик по кнопке");
 // });
 
-const imageEl = document.querySelector(".hero_img");
-const heroTitleEl = document.querySelector(".hero_title");
+// const imageEl = document.querySelector(".hero_img");
+// const heroTitleEl = document.querySelector(".hero_title");
 
-const navEl = document.querySelector(".site-nav");
+// const navEl = document.querySelector(".site-nav");
 
-navEl.classList.add("super-cool");
+// navEl.classList.add("super-cool");
 
-magicBtn.addEventListener("click", () => {
-  heroTitleEl.textContent = "Я сладкий пирожочек";
-  imageEl.src =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NLAKrR6mUnMW6tMRNBkzO9qqNh-GTXCQv64oH4HMPq4m4KIZ1NZaT8BEVs942KgboFY&usqp=CAU";
-  navEl.classList.toggle("dklgjdo");
-});
+// magicBtn.addEventListener("click", () => {
+//   heroTitleEl.textContent = "Я сладкий пирожочек";
+//   imageEl.src =
+//     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NLAKrR6mUnMW6tMRNBkzO9qqNh-GTXCQv64oH4HMPq4m4KIZ1NZaT8BEVs942KgboFY&usqp=CAU";
+//   navEl.classList.toggle("dklgjdo");
+// });
 
-const currentPafeUrl = "/portfolio";
+// const currentPafeUrl = "/portfolio";
 
-const linkEl = document.querySelector(
-  `.site-nav-link[href='${currentPafeUrl}']`
-);
+// const linkEl = document.querySelector(
+//   `.site-nav-link[href='${currentPafeUrl}']`
+// );
 
-linkEl.classList.add("site-nav-link-current");
+// linkEl.classList.add("site-nav-link-current");
 
-const colorPickerOptions = [
-  { label: "red", color: "#F44336" },
-  { label: "green", color: "#4CAF50" },
-  { label: "blue", color: "#2196F3" },
-  { label: "grey", color: "#60708B" },
-  { label: "pink", color: "#E91E63" },
-  { label: "indigo", color: "#3F51B5" },
-];
+// const colorPickerOptions = [
+//   { label: "red", color: "#F44336" },
+//   { label: "green", color: "#4CAF50" },
+//   { label: "blue", color: "#2196F3" },
+//   { label: "grey", color: "#60708B" },
+//   { label: "pink", color: "#E91E63" },
+//   { label: "indigo", color: "#3F51B5" },
+// ];
 
-const colorPickerContainerEl = document.querySelector(".js-color-picker");
+// const colorPickerContainerEl = document.querySelector(".js-color-picker");
 
 // const elements = colorPickerOptions.map((option) => {
 //   const buttonEl = document.createElement("button");
@@ -2216,21 +2216,21 @@ const colorPickerContainerEl = document.querySelector(".js-color-picker");
 //   return buttonEl;
 // });
 
-const makeColorPickerOptions = (options) => {
-  return options.map((option) => {
-    // Добавлен 'return'
-    const buttonEl = document.createElement("button");
-    buttonEl.classList.add("color-picker-option");
-    buttonEl.textContent = option.label;
-    buttonEl.style.backgroundColor = option.color;
+// const makeColorPickerOptions = (options) => {
+//   return options.map((option) => {
+//     // Добавлен 'return'
+//     const buttonEl = document.createElement("button");
+//     buttonEl.classList.add("color-picker-option");
+//     buttonEl.textContent = option.label;
+//     buttonEl.style.backgroundColor = option.color;
 
-    return buttonEl;
-  });
-};
+//     return buttonEl;
+//   });
+// };
 
-const elements = makeColorPickerOptions(colorPickerOptions);
+// const elements = makeColorPickerOptions(colorPickerOptions);
 
-colorPickerContainerEl.append(...elements);
+// colorPickerContainerEl.append(...elements);
 
 {
   /* <article class="product">
@@ -2246,40 +2246,40 @@ colorPickerContainerEl.append(...elements);
 //
 //
 //
-const makeProductCard = ({ name, description, price }) => {
-  const productEl = document.createElement("article");
-  productEl.classList.add("product");
+// const makeProductCard = ({ name, description, price }) => {
+//   const productEl = document.createElement("article");
+//   productEl.classList.add("product");
 
-  const nameEl = document.createElement("h2");
-  nameEl.textContent = name;
-  nameEl.classList.add("product-name");
+//   const nameEl = document.createElement("h2");
+//   nameEl.textContent = name;
+//   nameEl.classList.add("product-name");
 
-  const descrEl = document.createElement("p");
-  descrEl.textContent = description;
-  descrEl.classList.add("product-descr");
+//   const descrEl = document.createElement("p");
+//   descrEl.textContent = description;
+//   descrEl.classList.add("product-descr");
 
-  const priceEl = document.createElement("p");
-  priceEl.textContent = `Price : ${price}`;
-  priceEl.classList.add("product-price");
+//   const priceEl = document.createElement("p");
+//   priceEl.textContent = `Price : ${price}`;
+//   priceEl.classList.add("product-price");
 
-  productEl.append(nameEl, descrEl, priceEl);
+//   productEl.append(nameEl, descrEl, priceEl);
 
-  return productEl;
-};
+//   return productEl;
+// };
 
-console.log(makeProductCard(products[3]));
+// console.log(makeProductCard(products[3]));
 
-const elements1 = products.map(makeProductCard);
-console.log("🚀  elements1:", elements1);
+// const elements1 = products.map(makeProductCard);
+// console.log("🚀  elements1:", elements1);
 
-const productsEl = document.querySelector(".js-products");
-productsEl.append(...elements1);
+// const productsEl = document.querySelector(".js-products");
+// productsEl.append(...elements1);
 
-console.log("🚀  productsEl:", productsEl);
+// console.log("🚀  productsEl:", productsEl);
 
-const titleEl = document.querySelector(".js-title");
-titleEl.innerHTML = '<a href="#">99</a>';
+// const titleEl = document.querySelector(".js-title");
+// titleEl.innerHTML = '<a href="#">99</a>';
 
-titleEl.insertAdjacentHTML("beforeend", "<a href=''>Это ссылка)</a>");
+// titleEl.insertAdjacentHTML("beforeend", "<a href=''>Это ссылка)</a>");
 
-console.log(titleEl);
+// console.log(titleEl);
