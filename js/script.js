@@ -2276,3 +2276,10 @@ const productsEl = document.querySelector(".js-products");
 productsEl.append(...elements1);
 
 console.log("🚀  productsEl:", productsEl);
+
+const titleEl = document.querySelector(".js-title");
+titleEl.innerHTML = '<a href="#">99</a>';
+
+titleEl.insertAdjacentHTML("beforeend", "<a href=''>Это ссылка)</a>");
+
+console.log(titleEl);
