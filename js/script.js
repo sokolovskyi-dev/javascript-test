@@ -1,3 +1,5 @@
+import products from "./data/products.js";
+
 // "use strict";
 
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -2180,7 +2182,6 @@ const navEl = document.querySelector(".site-nav");
 navEl.classList.add("super-cool");
 
 magicBtn.addEventListener("click", () => {
-  //   navEl.classlist.toggle("wwwwwwwwwwwwww");
   heroTitleEl.textContent = "Я сладкий пирожочек";
   imageEl.src =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4NLAKrR6mUnMW6tMRNBkzO9qqNh-GTXCQv64oH4HMPq4m4KIZ1NZaT8BEVs942KgboFY&usqp=CAU";
@@ -2217,6 +2218,7 @@ const colorPickerContainerEl = document.querySelector(".js-color-picker");
 
 const makeColorPickerOptions = (options) => {
   return options.map((option) => {
+    // Добавлен 'return'
     const buttonEl = document.createElement("button");
     buttonEl.classList.add("color-picker-option");
     buttonEl.textContent = option.label;
@@ -2227,4 +2229,39 @@ const makeColorPickerOptions = (options) => {
 };
 
 const elements = makeColorPickerOptions(colorPickerOptions);
+
 colorPickerContainerEl.append(...elements);
+
+const product = {
+  name: "Servoprivody",
+  description:
+    "nhgkjshg  hfdjgh ldgkhsl hgs skjdgh slgkj sdlg jhsdkjgh dhg dkhg jsldkgj hdhgj lkdjshkdjhkdjhg ",
+  price: 2000,
+  available: true,
+  cnSale: true,
+};
+
+{
+  /* <article class="product">
+    <h2 class="product name">Название</h2>
+<p class="product-descr">Описание</p>
+<p class='product-price'>Цена:</p>
+</article> */
+}
+
+const productEl = document.createElement("article");
+productEl.classList.add("product");
+
+const nameEl = document.createElement("h2");
+nameEl.textContent = product.name;
+nameEl.classList.add("product-name");
+
+const descrEl = document.createElement("p");
+descrEl.textContent = product.description;
+descrEl.classList.add("product-descr");
+
+const priceEl = document.createElement("p");
+priceEl.textContent = `Price : ${product.price}`;
+priceEl.classList.add("product-price");
+
+productEl.append(nameEl, descrEl, priceEl);
