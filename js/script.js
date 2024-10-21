@@ -2302,11 +2302,18 @@
 //   console.log("Клик по целевой кнопке");
 // }
 
-const form = document.querySelector(".js-register-form");
+// const form = document.querySelector(".js-register-form");
 
-form.addEventListener("submit", onFormSubmit);
+// form.addEventListener("submit", onFormSubmit);
 
-function onFormSubmit(event) {
-  event.preventDefault();
-  console.log(event.currentTarget.elements.subscription.value);
+// function onFormSubmit(event) {
+//   event.preventDefault();
+//   console.log(event.currentTarget.elements.subscription.value);
+// }
+
+const input = document.querySelector(".js-input");
+input.addEventListener("input", onInputChange);
+
+function onInputChange(event) {
+  console.log(event.currentTarget.value);
 }
