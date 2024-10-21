@@ -2284,20 +2284,29 @@
 
 // console.log(titleEl);
 
-const targetBtn = document.querySelector(".js-target-btn");
-const addListenerBtn = document.querySelector(".js-add-listener");
-const removeListenerBtn = document.querySelector(".js-remove-listener");
+// const targetBtn = document.querySelector(".js-target-btn");
+// const addListenerBtn = document.querySelector(".js-add-listener");
+// const removeListenerBtn = document.querySelector(".js-remove-listener");
 
-addListenerBtn.addEventListener("click", () => {
-  console.log("Добавляю слушателя событий");
-  targetBtn.addEventListener("click", onTargetBtnClick);
-});
+// addListenerBtn.addEventListener("click", () => {
+//   console.log("Добавляю слушателя событий");
+//   targetBtn.addEventListener("click", onTargetBtnClick);
+// });
 
-removeListenerBtn.addEventListener("click", () => {
-  console.log("Снимаю слушателя");
-  targetBtn.removeEventListener("click", onTargetBtnClick);
-});
+// removeListenerBtn.addEventListener("click", () => {
+//   console.log("Снимаю слушателя");
+//   targetBtn.removeEventListener("click", onTargetBtnClick);
+// });
 
-function onTargetBtnClick() {
-  console.log("Клик по целевой кнопке");
+// function onTargetBtnClick() {
+//   console.log("Клик по целевой кнопке");
+// }
+
+const form = document.querySelector(".js-register-form");
+
+form.addEventListener("submit", onFormSubmit);
+
+function onFormSubmit(event) {
+  event.preventDefault();
+  console.log(event.currentTarget.elements.subscription.value);
 }
