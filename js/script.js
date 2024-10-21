@@ -2311,9 +2311,29 @@
 //   console.log(event.currentTarget.elements.subscription.value);
 // }
 
-const input = document.querySelector(".js-input");
-input.addEventListener("input", onInputChange);
+// const input = document.querySelector(".js-input");
+// const nameLabel = document.querySelector(".js-button >span");
+// const licenseCheckbox = document.querySelector(".js-license");
+// const btn = document.querySelector(".js-button");
 
-function onInputChange(event) {
-  console.log(event.currentTarget.value);
-}
+// input.addEventListener("input", onInputChange);
+// licenseCheckbox.addEventListener("change", onLicenseChange);
+
+// function onInputChange(event) {
+//   console.log(event.currentTarget.value);
+//   nameLabel.textContent = event.currentTarget.value;
+// }
+
+// function onLicenseChange(event) {
+//   console.log(event.currentTarget.checked);
+//   btn.disabled = !event.currentTarget.checked;
+// }
+
+// const output = document.querySelector(".js-output");
+// const clearBtn = document.querySelector(".js-clear");
+
+// window.addEventListener("keydown", onKeyPress);
+
+// function onKeyPress(event) {
+//   console.log(event);
+// }
