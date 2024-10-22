@@ -2339,11 +2339,11 @@
 // }
 const openModalBtn = document.querySelector('[data-action="open-modal"]');
 const closeModalBtn = document.querySelector('[data-action="close-modal"]');
-const backdropEl = document.querySelector(".js-backdrop");
+const backdrop = document.querySelector(".js-backdrop");
 
 openModalBtn.addEventListener("click", onOpenModal);
 closeModalBtn.addEventListener("click", onCloseModal);
-backdropEl.addEventListener("click", onBackdropClick);
+backdrop.addEventListener("click", onBackdropClick);
 
 function onOpenModal() {
   window.addEventListener("keydown", onEscKeyPress);
