@@ -2340,7 +2340,6 @@
 const openModalBtn = document.querySelector('[data-action="open-modal"]');
 const closeModalBtn = document.querySelector('[data-action="close-modal"]');
 const backdropEl = document.querySelector(".js-backdrop");
-const modalEl = document.querySelector(".modal");
 
 openModalBtn.addEventListener("click", onOpenModal);
 closeModalBtn.addEventListener("click", onCloseModal);
