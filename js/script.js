@@ -2337,3 +2337,33 @@
 // function onKeyPress(event) {
 //   console.log(event);
 // }
+const openModalBtn = document.querySelector('[data-action="open-modal"]');
+const closeModalBtn = document.querySelector('[data-action="close-modal"]');
+const backdropEl = document.querySelector(".js-backdrop");
+const modalEl = document.querySelector(".modal");
+
+openModalBtn.addEventListener("click", onOpenModal);
+closeModalBtn.addEventListener("click", onCloseModal);
+backdropEl.addEventListener("click", onBackdropClick);
+
+function onOpenModal() {
+  window.addEventListener("keydown", onEscKeyPress);
+  document.body.classList.add("show-modal");
+}
+
+function onCloseModal() {
+  window.removeEventListener("keydown", onEscKeyPress);
+  document.body.classList.remove("show-modal");
+}
+
+function onBackdropClick(event) {
+  if (event.target === event.currentTarget) {
+    onCloseModal();
+  }
+}
+
+function onEscKeyPress(event) {
+  if (event.code === "Escape") {
+    onCloseModal();
+  }
+}
