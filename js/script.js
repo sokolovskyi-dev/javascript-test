@@ -2366,3 +2366,26 @@
 //     onCloseModal();
 //   }
 // }
+const text = document.querySelector(".list-text");
+// console.log("🚀  text:", text);
+text.addEventListener("click", onClick);
+
+const maxLength = 25;
+const totalLength = maxLength + 3;
+
+function onClick(event) {
+  const shortText = event.currentTarget.textContent.slice(0, maxLength);
+  console.log("🚀  shortText:", shortText);
+
+  if (event.currentTarget.textContent.length > totalLength) {
+    const remainder = event.currentTarget.textContent.slice(maxLength);
+    console.log("🚀  remainder:", remainder);
+    text.setAttribute("data-title", remainder);
+    console.log(text);
+    event.currentTarget.textContent = shortText + "...";
+  } else {
+    const remainder = event.currentTarget.dataset.title;
+    console.log("🚀  remainder:", remainder);
+    event.currentTarget.textContent = shortText + remainder;
+  }
+}
