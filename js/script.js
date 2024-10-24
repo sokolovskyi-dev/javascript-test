@@ -2444,12 +2444,20 @@ const cars = [
 
 const listEl = document.querySelector(".js-list");
 const formEl = document.querySelector(".js-search-form");
+const resetBtnEl = document.querySelector(".js-reset");
 
+resetBtnEl.addEventListener("click", onReset);
 formEl.addEventListener("submit", onSearch);
 
-const markup = cars
-  .map(
-    ({ id, car, type, price, img }) => `
+function onReset() {
+  listEl.insertAdjacentHTML("beforeend", createMarkup(cars));
+  formEl.elements.query.value = "";
+}
+
+function createMarkup(arr) {
+  return arr
+    .map(
+      ({ id, car, type, price, img }) => `
 <li data-id="${id}">
         <img src="${img}" alt="${car}" width = '300' >
         <h2>${car}</h2>
@@ -2457,17 +2465,25 @@ const markup = cars
         <p>${price}</p>
       </li>
 `
-  )
-  .join("");
+    )
+    .join("");
+}
 
-listEl.insertAdjacentHTML("beforeend", markup);
+listEl.insertAdjacentHTML("beforeend", createMarkup(cars));
 
 function onSearch(event) {
   event.preventDefault();
   const form = event.currentTarget;
-  console.dir(form.elements);
+  // console.dir(form.elements);
 
   const { query, select } = form.elements;
   console.dir(query.value);
   console.dir(select.value);
+  const searchCars = cars.filter(
+    (item) =>
+      item[select.value].toLowerCase() === query.value.trim().toLowerCase()
+  );
+  // console.log("🚀  searchCars:", searchCars);
+
+  listEl.innerHTML = createMarkup(searchCars);
 }
