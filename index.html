@@ -81,12 +81,17 @@
 
     <button class="button" data-action="open-modal">Открыть модалку</button>
 
-    <form action="submit" class="js-form">
-      <input type="text" />
-      <input type="email" />
-      <input type="number" />
-      <button>Submit</button>
+    <form action="submit" class="js-search-form">
+      <input type="text" name="query" />
+      <select name="select">
+        <option value="car">Марка</option>
+        <option value="type">Модель</option>
+      </select>
+
+      <button>Поиск</button>
     </form>
+
+    <ul class="js-list"></ul>
 
     <script src="./js/script.js" type="module"></script>
   </body>
