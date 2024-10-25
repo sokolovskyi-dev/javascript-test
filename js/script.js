@@ -2487,21 +2487,24 @@
 
 //   listEl.innerHTML = createMarkup(searchCars);
 // }
-const select = document.querySelector(".pizza-select");
-const textOutput = document.querySelector(".text-output");
-const valueOutput = document.querySelector(".value-output");
 
-select.addEventListener("change", setOutput);
+const select = document.querySelector(".js-select");
+const selectedOutputText = document.querySelector(".js-selected-auto");
+const selectedOutputValue = document.querySelector(".js-selected-value");
 
-function setOutput(event) {
+select.addEventListener("change", onSelectChange);
+
+function onSelectChange(event) {
   const selectedOptionValue = event.currentTarget.value;
   console.log("🚀  selectedOptionValue:", selectedOptionValue);
 
   const selectedOptionIndex = event.currentTarget.selectedIndex;
   console.log("🚀  selectedOptionIndex:", selectedOptionIndex);
 
-  const selectedOptionText = event.currentTarget.textContent;
+  const selectedOptionText =
+    event.currentTarget.options[selectedOptionIndex].textContent;
   console.log("🚀  selectedOptionText:", selectedOptionText);
 
-  console.log(event.currentTarget.options[0]);
+  selectedOutputText.textContent = selectedOptionText;
+  selectedOutputValue.textContent = selectedOptionValue;
 }
