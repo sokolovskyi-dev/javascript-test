@@ -2509,9 +2509,28 @@
 //   selectedOutputValue.textContent = selectedOptionValue;
 // }
 
-// const input = document.querySelector(".text-input");
-// const setFocusBtn = document.querySelector("[data-action='set']");
-// const removeFocusBtn = document.querySelector("[data-action='remove']");
-// console.log("🚀  removeFocusBtn:", removeFocusBtn);
+const input = document.querySelector(".text-input");
 
-console.log(555);
+const setFocusBtn = document.querySelector("[data-action='set']");
+
+const removeFocusBtn = document.querySelector("[data-action='remove']");
+
+setFocusBtn.addEventListener("click", onInputFocusSet);
+removeFocusBtn.addEventListener("click", onInputFocusRemove);
+
+input.addEventListener("focus", () => {
+  input.value = "jsahvjkdshfvlkjdshvblskj";
+});
+
+input.addEventListener("blur", () => {
+  input.value = "";
+});
+
+function onInputFocusSet() {
+  input.focus();
+}
+
+function onInputFocusRemove() {
+  input.blur();
+  input.value = "";
+}
