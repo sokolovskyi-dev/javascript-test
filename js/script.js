@@ -2488,23 +2488,30 @@
 //   listEl.innerHTML = createMarkup(searchCars);
 // }
 
-const select = document.querySelector(".js-select");
-const selectedOutputText = document.querySelector(".js-selected-auto");
-const selectedOutputValue = document.querySelector(".js-selected-value");
+// const select = document.querySelector(".js-select");
+// const selectedOutputText = document.querySelector(".js-selected-auto");
+// const selectedOutputValue = document.querySelector(".js-selected-value");
 
-select.addEventListener("change", onSelectChange);
+// select.addEventListener("change", onSelectChange);
 
-function onSelectChange(event) {
-  const selectedOptionValue = event.currentTarget.value;
-  console.log("🚀  selectedOptionValue:", selectedOptionValue);
+// function onSelectChange(event) {
+//   const selectedOptionValue = event.currentTarget.value;
+//   console.log("🚀  selectedOptionValue:", selectedOptionValue);
 
-  const selectedOptionIndex = event.currentTarget.selectedIndex;
-  console.log("🚀  selectedOptionIndex:", selectedOptionIndex);
+//   const selectedOptionIndex = event.currentTarget.selectedIndex;
+//   console.log("🚀  selectedOptionIndex:", selectedOptionIndex);
 
-  const selectedOptionText =
-    event.currentTarget.options[selectedOptionIndex].textContent;
-  console.log("🚀  selectedOptionText:", selectedOptionText);
+//   const selectedOptionText =
+//     event.currentTarget.options[selectedOptionIndex].textContent;
+//   console.log("🚀  selectedOptionText:", selectedOptionText);
 
-  selectedOutputText.textContent = selectedOptionText;
-  selectedOutputValue.textContent = selectedOptionValue;
-}
+//   selectedOutputText.textContent = selectedOptionText;
+//   selectedOutputValue.textContent = selectedOptionValue;
+// }
+
+// const input = document.querySelector(".text-input");
+// const setFocusBtn = document.querySelector("[data-action='set']");
+// const removeFocusBtn = document.querySelector("[data-action='remove']");
+// console.log("🚀  removeFocusBtn:", removeFocusBtn);
+
+console.log(555);
