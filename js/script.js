@@ -2509,28 +2509,30 @@
 //   selectedOutputValue.textContent = selectedOptionValue;
 // }
 
-const input = document.querySelector(".text-input");
+// const input = document.querySelector(".text-input");
 
-const setFocusBtn = document.querySelector("[data-action='set']");
+// const setFocusBtn = document.querySelector("[data-action='set']");
 
-const removeFocusBtn = document.querySelector("[data-action='remove']");
+// const removeFocusBtn = document.querySelector("[data-action='remove']");
 
-setFocusBtn.addEventListener("click", onInputFocusSet);
-removeFocusBtn.addEventListener("click", onInputFocusRemove);
+// setFocusBtn.addEventListener("click", onInputFocusSet);
+// removeFocusBtn.addEventListener("click", onInputFocusRemove);
 
-input.addEventListener("focus", () => {
-  input.value = "jsahvjkdshfvlkjdshvblskj";
-});
+// input.addEventListener("focus", () => {
+//   input.value = "jsahvjkdshfvlkjdshvblskj";
+// });
 
-input.addEventListener("blur", () => {
-  input.value = "";
-});
+// input.addEventListener("blur", () => {
+//   input.value = "";
+// });
 
-function onInputFocusSet() {
-  input.focus();
-}
+// function onInputFocusSet() {
+//   input.focus();
+// }
 
-function onInputFocusRemove() {
-  input.blur();
-  input.value = "";
-}
+// function onInputFocusRemove() {
+//   input.blur();
+//   input.value = "";
+// }
+const input = document.querySelector("input");
+console.log("🚀  input:", input);
