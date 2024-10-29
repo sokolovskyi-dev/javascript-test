@@ -2563,3 +2563,41 @@
 
 // const elements = makeColorPickerOptions(colorPickerOptions);
 // colorPickerContainerEl.append(...elements);
+const tech = [
+  { label: "HTML" },
+  { label: "CSS" },
+  { label: "JavaScript" },
+  { label: "Node.js" },
+  { label: "React" },
+  { label: "Vue" },
+  { label: "Next.js" },
+  { label: "Mobx" },
+  { label: "Redux" },
+  { label: "React Router" },
+  { label: "GraphQl" },
+  { label: "PostgreSQL" },
+  { label: "MongoDB" },
+];
+
+const list = document.querySelector(".js-list");
+const input = document.querySelector("#filter");
+
+input.addEventListener("input", onFilterChange);
+
+const listItemsMarkup = createlistItemsMarkup(tech);
+
+list.innerHTML = listItemsMarkup;
+
+function createlistItemsMarkup(items) {
+  return items.map((item) => `<li>${item.label}</li>`).join("");
+}
+
+function onFilterChange(evt) {
+  const filter = evt.target.value.toLowerCase();
+
+  const filteredItems = tech.filter((t) =>
+    t.label.toLowerCase().includes(filter)
+  );
+  const listItemsMarkup = createlistItemsMarkup(filteredItems);
+  list.innerHTML = listItemsMarkup;
+}
