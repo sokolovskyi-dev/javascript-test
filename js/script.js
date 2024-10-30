@@ -2611,15 +2611,66 @@
 //   console.log("Image loaded");
 //   evt.target.classList.add("appear");
 // }
-const container = document.querySelector(".js-container");
+// const container = document.querySelector(".js-container");
+
+// container.addEventListener("click", onClick);
+
+// function onClick(e) {
+//   if (!e.target.classList.contains("js-box")) {
+//     return;
+//   }
+
+//   console.log("Жмак по BOX", e.target.dataset.color);
+//   e.target.style.backgroundColor = e.target.dataset.color;
+// }
+
+const container = document.querySelector(".js-content");
+console.log("🚀  container:", container);
+
+const wins = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9],
+  [1, 5, 9],
+  [3, 5, 7],
+];
+
+let player = "X";
+let markup = "";
+const historyX = [];
+const history0 = [];
+
+for (let i = 1; i < 10; i += 1) {
+  markup += `<div class='item' data-id='${i}'></div>`;
+}
+console.log("🚀  markup:", markup);
+
+container.innerHTML = markup;
 
 container.addEventListener("click", onClick);
 
 function onClick(e) {
-  if (!e.target.classList.contains("js-box")) {
+  if (!e.target.classList.contains("item")) {
     return;
   }
 
-  console.log("Жмак по BOX", e.target.dataset.color);
-  e.target.style.backgroundColor = e.target.dataset.color;
+  if (e.target.textContent) {
+    return;
+  }
+  const id = Number(e.target.dataset.id);
+  if (player === "X") {
+    historyX.push(id);
+  } else {
+    history0.push(id);
+  }
+  console.log(historyX);
+  console.log(history0);
+
+  e.target.textContent = player;
+  player = player === "X" ? "0" : "X";
 }
+
+function isWinner() {}
