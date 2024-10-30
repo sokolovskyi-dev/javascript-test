@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .magic-btn {
   display: flex;
   align-items: center;
@@ -79,4 +85,17 @@ body.show-modal .modal {
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   transform: scale(1.1);
   transition: transform 200ms ease-in-out;
+}
+
+.js-container {
+  display: flex;
+  gap: 20px;
+
+  padding: 30px;
+  outline: 1px solid black;
+}
+.js-box {
+  width: 100px;
+  height: 100px;
+  outline: 5px solid tomato;
 }

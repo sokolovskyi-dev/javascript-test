@@ -25,6 +25,30 @@
     <link rel="manifest" href="/icons/site.webmanifest" />
 
     <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- <style>
+      .feed {
+        list-style: none;
+      }
+
+      .feed li:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      .feed img {
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 500ms linear 500ms;
+        width: 640px;
+        height: 480px;
+        object-fit: cover;
+      }
+
+      .feed img.appear {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    </style> -->
   </head>
   <body>
     <div id="box1"></div>
@@ -84,11 +108,12 @@
       <input type="text" id="filter" />
     </label>
 
-    <ul class="js-list"></ul>
+    <div class="container js-container">
+      <div class="box js-box item-red" data-color="red"></div>
+      <div class="box js-box item-green" data-color="green"></div>
+      <div class="box js-box item-black" data-color="black"></div>
+    </div>
 
-    <script src="
-https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js
-"></script>
     <script src="./js/script.js" type="module"></script>
   </body>
 </html>

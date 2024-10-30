@@ -2563,41 +2563,63 @@
 
 // const elements = makeColorPickerOptions(colorPickerOptions);
 // colorPickerContainerEl.append(...elements);
-const tech = [
-  { label: "HTML" },
-  { label: "CSS" },
-  { label: "JavaScript" },
-  { label: "Node.js" },
-  { label: "React" },
-  { label: "Vue" },
-  { label: "Next.js" },
-  { label: "Mobx" },
-  { label: "Redux" },
-  { label: "React Router" },
-  { label: "GraphQl" },
-  { label: "PostgreSQL" },
-  { label: "MongoDB" },
-];
+// const tech = [
+//   { label: "HTML" },
+//   { label: "CSS" },
+//   { label: "JavaScript" },
+//   { label: "Node.js" },
+//   { label: "React" },
+//   { label: "Vue" },
+//   { label: "Next.js" },
+//   { label: "Mobx" },
+//   { label: "Redux" },
+//   { label: "React Router" },
+//   { label: "GraphQl" },
+//   { label: "PostgreSQL" },
+//   { label: "MongoDB" },
+// ];
 
-const list = document.querySelector(".js-list");
-const input = document.querySelector("#filter");
+// const list = document.querySelector(".js-list");
+// const input = document.querySelector("#filter");
 
-input.addEventListener("input", _.debounce(onFilterChange, 300));
+// input.addEventListener("input", _.debounce(onFilterChange, 300));
 
-const listItemsMarkup = createlistItemsMarkup(tech);
+// const listItemsMarkup = createlistItemsMarkup(tech);
 
-list.innerHTML = listItemsMarkup;
+// list.innerHTML = listItemsMarkup;
 
-function createlistItemsMarkup(items) {
-  return items.map((item) => `<li>${item.label}</li>`).join("");
-}
+// function createlistItemsMarkup(items) {
+//   return items.map((item) => `<li>${item.label}</li>`).join("");
+// }
 
-function onFilterChange(evt) {
-  const filter = evt.target.value.toLowerCase();
+// function onFilterChange(evt) {
+//   const filter = evt.target.value.toLowerCase();
 
-  const filteredItems = tech.filter((t) =>
-    t.label.toLowerCase().includes(filter)
-  );
-  const listItemsMarkup = createlistItemsMarkup(filteredItems);
-  list.innerHTML = listItemsMarkup;
+//   const filteredItems = tech.filter((t) =>
+//     t.label.toLowerCase().includes(filter)
+//   );
+//   const listItemsMarkup = createlistItemsMarkup(filteredItems);
+//   list.innerHTML = listItemsMarkup;
+// }
+// const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+// lazyImages.forEach((image) => {
+//   image.addEventListener("load", onImageLoad);
+// });
+
+// function onImageLoad(evt) {
+//   console.log("Image loaded");
+//   evt.target.classList.add("appear");
+// }
+const container = document.querySelector(".js-container");
+
+container.addEventListener("click", onClick);
+
+function onClick(e) {
+  if (!e.target.classList.contains("js-box")) {
+    return;
+  }
+
+  console.log("Жмак по BOX", e.target.dataset.color);
+  e.target.style.backgroundColor = e.target.dataset.color;
 }
