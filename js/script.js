@@ -2582,7 +2582,7 @@ const tech = [
 const list = document.querySelector(".js-list");
 const input = document.querySelector("#filter");
 
-input.addEventListener("input", onFilterChange);
+input.addEventListener("input", _.debounce(onFilterChange, 300));
 
 const listItemsMarkup = createlistItemsMarkup(tech);
 
