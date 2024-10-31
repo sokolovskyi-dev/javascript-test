@@ -87,7 +87,7 @@ body.show-modal .modal {
   transition: transform 200ms ease-in-out;
 }
 
-.js-container {
+/* .js-container {
   display: flex;
   gap: 20px;
 
@@ -131,4 +131,32 @@ body.show-modal .modal {
 }
 .container {
   outline: 1px solid red;
+} */
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  margin-top: 50px;
+
+  outline: 1px solid black;
+}
+
+li {
+  width: 250px;
+  height: 200px;
+  outline: 1px solid red;
+}
+
+img {
+  width: 200px;
+  height: 150px;
+
+  object-fit: cover;
+}
+
+h2 {
+  outline: 1px solid green;
 }
