@@ -2776,8 +2776,42 @@
 
 // // from GPT
 
-const arr = ["abc", "acb", "bac", "foo", "bca", "cab", "cba"];
+// const arr = ["abc", "acb", "bac", "foo", "bca", "cab", "cba"];
+// console.log("🚀  arr:", arr);
+// function findUniqueWord(arr) {
+//   const letterCounts = {};
 
-for (const element of arr) {
-  console.log("🚀  element:", element);
-}
+//   arr.forEach((word) => {
+//     console.log(word.split(""));
+//     word.split("").forEach((letter) => {
+//       console.log(letter);
+//       letterCounts[letter] = (letterCounts[letter] || 0) + 1;
+//     });
+//   });
+
+//   return arr.find((word) =>
+//     word.split("").every((letter) => letterCounts[letter] === 1)
+//   );
+// }
+// const uniqueWord = findUniqueWord(arr);
+// console.log(findUniqueWord(arr));
+// const arr = ["abc", "acb", "bac", "foo", "bca", "cab", "cba"];
+
+// function findUniqueWord(arr) {
+//   const letterCounts = {};
+
+//   // Подсчёт частоты появления каждой буквы во всех строках массива
+//   arr.forEach((word) => {
+//     word.split("").forEach((letter) => {
+//       letterCounts[letter] = (letterCounts[letter] || 0) + 1;
+//     });
+//   });
+
+//   // Находим строку, в которой все буквы встречаются только один раз в массиве
+//   return arr.find((word) =>
+//     word.split("").every((letter) => letterCounts[letter] === 1)
+//   );
+// }
+
+// const uniqueWord = findUniqueWord(arr);
+// console.log(uniqueWord);
