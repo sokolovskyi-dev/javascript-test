@@ -2815,12 +2815,3 @@
 
 // const uniqueWord = findUniqueWord(arr);
 // console.log(uniqueWord);
-const arr = ["abc", "acb", "bac", "foo", "bca", "cab", "cba"];
-console.log("🚀  arr:", arr);
-
-arr.forEach((word) => {
-  console.log(word.split(""));
-  word.split("").forEach((letter) => {
-    console.log(letter);
-  });
-});
