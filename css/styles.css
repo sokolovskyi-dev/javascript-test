@@ -133,7 +133,7 @@ body.show-modal .modal {
   outline: 1px solid red;
 } */
 
-ul {
+/* ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -150,13 +150,11 @@ li {
   outline: 1px solid red;
 }
 
-img {
-  width: 200px;
-  height: 150px;
 
-  object-fit: cover;
-}
 
 h2 {
   outline: 1px solid green;
+} */
+img {
+  object-fit: cover;
 }
