@@ -110,12 +110,24 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
       </li>
     </ul>
 
-    <label>
-      Что ищем?
-      <input type="text" id="filter" />
-    </label>
+    <form class="feedback-form js-feedback-form">
+      <label>
+        <b>Name</b>
+        <input
+          type="text"
+          name="name"
+          placeholder="Введите ваше имя"
+          value="Анонимус"
+        />
+      </label>
+      <label>
+        <b>Message</b>
+        <textarea class="textarea" name="message" rows="6"></textarea>
+      </label>
+      <button type="submit">Оставить отзыв</button>
+    </form>
 
-    <ul class="js-container"></ul>
+    <ul class="js-container1"></ul>
 
     <script src="
 https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
