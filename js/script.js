@@ -3046,3 +3046,4 @@
 //     textareaEl.value = savedMessage;
 //   }
 // }
+localStorage.setItem("key1", "value");
