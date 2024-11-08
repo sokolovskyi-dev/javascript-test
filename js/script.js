@@ -2815,22 +2815,22 @@
 
 // const uniqueWord = findUniqueWord(arr);
 // console.log(uniqueWord);
-function fn(arr, cash) {
-  const obj = {};
+// function fn(arr, cash) {
+//   const obj = {};
 
-  for (let i = 1; i <= cash; i++) {
-    obj[i] = 0;
-  }
-  arr.forEach((buyer) => {
-    const values = Object.values(obj);
-    const minValue = Math.min(...values);
-    const minCassa = values.indexOf(minValue) + 1;
-    obj[minCassa] += buyer;
-  });
-  return obj;
-}
+//   for (let i = 1; i <= cash; i++) {
+//     obj[i] = 0;
+//   }
+//   arr.forEach((buyer) => {
+//     const values = Object.values(obj);
+//     const minValue = Math.min(...values);
+//     const minCassa = values.indexOf(minValue) + 1;
+//     obj[minCassa] += buyer;
+//   });
+//   return obj;
+// }
 
-console.log(fn([12, 3, 5, 6, 2, 15, 7], 2));
+// console.log(fn([12, 3, 5, 6, 2, 15, 7], 2));
 // console.log(2);
 // const cars = [
 //   {
@@ -3017,32 +3017,32 @@ console.log(fn([12, 3, 5, 6, 2, 15, 7], 2));
 // const parsedData = JSON.parse(savedData);
 // console.log("🚀  parsedData:", parsedData);
 
-const formEl = document.querySelector(".js-feedback-form");
-const textareaEl = document.querySelector(".js-feedback-form .textarea");
+// const formEl = document.querySelector(".js-feedback-form");
+// const textareaEl = document.querySelector(".js-feedback-form .textarea");
 
-populareTextarea();
+// populareTextarea();
 
-formEl.addEventListener("submit", onFormSubmit);
+// formEl.addEventListener("submit", onFormSubmit);
 
-textareaEl.addEventListener("input", onTextareaInput);
+// textareaEl.addEventListener("input", onTextareaInput);
 
-function onFormSubmit(e) {
-  e.preventDefault();
-  console.log("Отправляем форму");
-  e.currentTarget.reset();
-  localStorage.removeItem("feedback-msg");
-}
+// function onFormSubmit(e) {
+//   e.preventDefault();
+//   console.log("Отправляем форму");
+//   e.currentTarget.reset();
+//   localStorage.removeItem("feedback-msg");
+// }
 
-function onTextareaInput(e) {
-  const message = e.currentTarget.value;
-  localStorage.setItem("feedback-msg", message);
-}
+// function onTextareaInput(e) {
+//   const message = e.currentTarget.value;
+//   localStorage.setItem("feedback-msg", message);
+// }
 
-function populareTextarea() {
-  const savedMessage = localStorage.getItem("feedback-msg");
+// function populareTextarea() {
+//   const savedMessage = localStorage.getItem("feedback-msg");
 
-  if (savedMessage) {
-    console.log("🚀  savedMessage:", savedMessage);
-    textareaEl.value = savedMessage;
-  }
-}
+//   if (savedMessage) {
+//     console.log("🚀  savedMessage:", savedMessage);
+//     textareaEl.value = savedMessage;
+//   }
+// }
