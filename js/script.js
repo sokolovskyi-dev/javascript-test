@@ -2815,3 +2815,19 @@
 
 // const uniqueWord = findUniqueWord(arr);
 // console.log(uniqueWord);
+function fn(arr, cash) {
+  const obj = {};
+
+  for (let i = 1; i <= cash; i++) {
+    obj[i] = 0;
+  }
+  arr.forEach((buyer) => {
+    const values = Object.values(obj);
+    const minValue = Math.min(...values);
+    const minCassa = values.indexOf(minValue) + 1;
+    obj[minCassa] += buyer;
+  });
+  return obj;
+}
+
+console.log(fn([12, 3, 5, 6, 2, 15, 7], 2));
