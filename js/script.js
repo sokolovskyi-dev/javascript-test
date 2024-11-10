@@ -3012,10 +3012,14 @@
 // // function loadContent(entries) {}
 
 // localStorage.setItem("my-data", JSON.stringify({ name: "Mango", age: 2 }));
+//
+//
+//
+//
+//
 
 // const savedData = localStorage.getItem("my-data");
 // const parsedData = JSON.parse(savedData);
-// console.log("🚀  parsedData:", parsedData);
 
 // const formEl = document.querySelector(".js-feedback-form");
 // const textareaEl = document.querySelector(".js-feedback-form .textarea");
@@ -3028,7 +3032,6 @@
 
 // function onFormSubmit(e) {
 //   e.preventDefault();
-//   console.log("Отправляем форму");
 //   e.currentTarget.reset();
 //   localStorage.removeItem("feedback-msg");
 // }
@@ -3042,8 +3045,6 @@
 //   const savedMessage = localStorage.getItem("feedback-msg");
 
 //   if (savedMessage) {
-//     console.log("🚀  savedMessage:", savedMessage);
 //     textareaEl.value = savedMessage;
 //   }
 // }
-localStorage.setItem("key1", "value");
