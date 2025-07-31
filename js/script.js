@@ -3048,3 +3048,135 @@
 //     textareaEl.value = savedMessage;
 //   }
 // }
+// const obj1 = {
+//   name: "Anna",
+//   address: {
+//     city: "Kyiv",
+//     zip: 12345,
+//   },
+// };
+
+// const obj2 = {
+//   name: "Anna",
+//   address: {
+//     city: "Kyiv",
+//     zip: 12345,
+//   },
+// };
+
+// function deepEqual(a, b) {
+//   if (a === b) return true;
+
+//   if (
+//     typeof a !== "object" ||
+//     typeof b !== "object" ||
+//     a === null ||
+//     b === null
+//   )
+//     return false;
+
+//   const keysA = Object.keys(a);
+//   const keysB = Object.keys(b);
+
+//   if (keysA.length !== keysB.length) return false;
+
+//   for (let key of keysA) {
+//     // ВНИМАНИЕ: Вот здесь — рекурсивный вызов!
+//     if (!deepEqual(a[key], b[key])) return false;
+//   }
+
+//   return true;
+// }
+
+// const a = {
+//   name: "Anna",
+//   address: {
+//     city: "Kyiv",
+//     zip: 12345,
+//   },
+// };
+
+// const b = {
+//   name: "Anna",
+//   address: {
+//     city: "Kyiv",
+//     zip: 12345,
+//   },
+// };
+
+// console.log("💡 Result:", deepEqual(a, b));
+
+// function deepEqual(a, b, path = "root") {
+//   console.log(`🔍 Comparing at "${path}":`, a, b);
+
+//   // Если строго равны — возвращаем true
+//   if (a === b) {
+//     console.log(`✅ Equal at "${path}"`);
+//     return true;
+//   }
+
+//   // Если не объекты или один из них null — false
+//   if (
+//     typeof a !== "object" ||
+//     typeof b !== "object" ||
+//     a === null ||
+//     b === null
+//   ) {
+//     console.log(`❌ Not equal (type or null) at "${path}"`);
+//     return false;
+//   }
+
+//   const keysA = Object.keys(a);
+//   const keysB = Object.keys(b);
+
+//   if (keysA.length !== keysB.length) {
+//     console.log(`❌ Different number of keys at "${path}"`);
+//     return false;
+//   }
+
+//   for (let key of keysA) {
+//     if (!keysB.includes(key)) {
+//       console.log(`❌ Key "${key}" not found in second object at "${path}"`);
+//       return false;
+//     }
+
+//     // Рекурсивно сравниваем вложенные значения
+//     const fullPath = `${path}.${key}`;
+//     if (!deepEqual(a[key], b[key], fullPath)) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// Напиши функцию deepSum(obj), которая принимает вложенный объект и возвращает сумму всех числовых значений, находящихся на любом уровне вложенности.
+const data = {
+  a: 5,
+  b: {
+    c: 3,
+    d: {
+      e: 2,
+      f: "hello",
+    },
+  },
+  g: 7,
+};
+
+console.log(deepSum(data));
+function deepSum(data) {
+  let sum = 0;
+
+  const keys = Object.keys(data);
+  for (let key of keys) {
+    const value = data[key];
+
+    if (typeof value === "number") {
+      sum += value;
+    } else if (typeof value === "object") {
+      sum += deepSum(value);
+    }
+  }
+
+  return sum;
+}
