@@ -3151,32 +3151,55 @@
 // }
 
 // Напиши функцию deepSum(obj), которая принимает вложенный объект и возвращает сумму всех числовых значений, находящихся на любом уровне вложенности.
-const data = {
-  a: 5,
-  b: {
-    c: 3,
-    d: {
-      e: 2,
-      f: "hello",
-    },
-  },
-  g: 7,
-};
+// const data = {
+//   a: 5,
+//   b: {
+//     c: 3,
+//     d: {
+//       e: 2,
+//       f: "hello",
+//     },
+//   },
+//   g: 7,
+// };
 
-console.log(deepSum(data));
-function deepSum(data) {
-  let sum = 0;
+// console.log(deepSum(data));
+// function deepSum(data) {
+//   let sum = 0;
 
-  const keys = Object.keys(data);
-  for (let key of keys) {
-    const value = data[key];
+//   const keys = Object.keys(data);
+//   for (let key of keys) {
+//     const value = data[key];
 
-    if (typeof value === "number") {
-      sum += value;
-    } else if (typeof value === "object") {
-      sum += deepSum(value);
-    }
-  }
+//     if (typeof value === "number") {
+//       sum += value;
+//     } else if (typeof value === "object") {
+//       sum += deepSum(value);
+//     }
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
+
+// 1
+const fruits = ["apple", "banana", "cherry"];
+
+fruits.forEach((item) => console.log(item));
+
+// 2
+
+const numbers = [1, 2, 3, 4, 5];
+
+const newArr = numbers.map((number) => number ** 2);
+console.log("🚀 ~ newArr:", newArr);
+
+// 3
+const numbers1 = [1, 2, 3, 4, 5, 6];
+
+const even = numbers1.filter((number) => number % 2 === 0);
+console.log("🚀 ~ even:", even);
+
+// 4
+const words = ["hi", "hello", "fantastic", "hey"];
+const word = words.find((word) => word.length > 5);
+console.log(word);
