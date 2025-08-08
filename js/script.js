@@ -3182,84 +3182,89 @@
 // }
 
 // 1
-const fruits = ["apple", "banana", "cherry"];
+// const fruits = ["apple", "banana", "cherry"];
 
-fruits.forEach((item) => console.log(item));
+// fruits.forEach((item) => console.log(item));
 
-// 2
+// // 2
 
+// const numbers = [1, 2, 3, 4, 5];
+
+// const newArr = numbers.map((number) => number ** 2);
+// console.log("🚀 ~ newArr:", newArr);
+
+// // 3
+// const numbers1 = [1, 2, 3, 4, 5, 6];
+
+// const even = numbers1.filter((number) => number % 2 === 0);
+// console.log("🚀 ~ even:", even);
+
+// // 4
+// const words = ["hi", "hello", "fantastic", "hey"];
+// const word = words.find((word) => word.length > 5);
+// console.log(word);
+
+// // 5
+// const numbers2 = [3, 4, -2, 5];
+// const hasNegative = numbers2.some((number) => number < 0);
+// console.log("🚀 ~ hasNegative:", hasNegative);
+
+// // 6
+// const numbers3 = [3, 4, 5];
+// const allPositive = numbers3.every((number) => number > 0);
+// console.log("🚀 ~ allPositive:", allPositive);
+
+// // 7
+// const numbers4 = [10, 20, 30];
+// const sum = numbers4.reduce((acc, number) => acc + number, 0);
+// console.log("🚀 ~ sum:", sum);
+
+// // 8
+// const animals = ["cat", "giraffe", "lion"];
+// const obj = animals.reduce((acc, item) => {
+//   acc[item] = item.length;
+//   return acc;
+// }, {});
+// console.log(obj);
+
+// //9
+// const words3 = ["apple", "banana", "kiwi", "watermelon"];
+// const sorted = words3.sort((a, b) => a.length - b.length);
+// console.log("🚀 ~ sorted:", sorted);
+
+// //10
+// const users = [
+//   { name: "Alice", friends: ["Bob"] },
+//   { name: "Tom", friends: [] },
+//   { name: "Anna", friends: ["Joe", "Kate"] },
+// ];
+
+// const usersWithFriends = users
+//   .filter((user) => user.friends.length)
+//   .map((user) => user.name);
+// console.log("🚀 ~ usersWithFriends:", usersWithFriends);
+
+// //11
+// const numbers5 = [1, 2, 3, 4, 5, 6];
+// const sortedNumbers = numbers5.reduce(
+//   (acc, number) => {
+//     number % 2 === 0 ? acc.even.push(number) : acc.odd.push(number);
+//     return acc;
+//   },
+//   { even: [], odd: [] }
+// );
+// console.log(sortedNumbers);
+
+// //12
+// const words4 = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const obj1 = words4.reduce((acc, word) => {
+//   // acc.hasOwnProperty(word) ? (acc[word] += 1) : (acc[word] = 1);
+//   acc[word] = (acc[word] || 0) + 1;
+//   return acc;
+// }, {});
+// console.log(obj1);
 const numbers = [1, 2, 3, 4, 5];
+const numbers1 = numbers.map((number) => number * 6);
 
-const newArr = numbers.map((number) => number ** 2);
-console.log("🚀 ~ newArr:", newArr);
-
-// 3
-const numbers1 = [1, 2, 3, 4, 5, 6];
-
-const even = numbers1.filter((number) => number % 2 === 0);
-console.log("🚀 ~ even:", even);
-
-// 4
-const words = ["hi", "hello", "fantastic", "hey"];
-const word = words.find((word) => word.length > 5);
-console.log(word);
-
-// 5
-const numbers2 = [3, 4, -2, 5];
-const hasNegative = numbers2.some((number) => number < 0);
-console.log("🚀 ~ hasNegative:", hasNegative);
-
-// 6
-const numbers3 = [3, 4, 5];
-const allPositive = numbers3.every((number) => number > 0);
-console.log("🚀 ~ allPositive:", allPositive);
-
-// 7
-const numbers4 = [10, 20, 30];
-const sum = numbers4.reduce((acc, number) => acc + number, 0);
-console.log("🚀 ~ sum:", sum);
-
-// 8
-const animals = ["cat", "giraffe", "lion"];
-const obj = animals.reduce((acc, item) => {
-  acc[item] = item.length;
-  return acc;
-}, {});
-console.log(obj);
-
-//9
-const words3 = ["apple", "banana", "kiwi", "watermelon"];
-const sorted = words3.sort((a, b) => a.length - b.length);
-console.log("🚀 ~ sorted:", sorted);
-
-//10
-const users = [
-  { name: "Alice", friends: ["Bob"] },
-  { name: "Tom", friends: [] },
-  { name: "Anna", friends: ["Joe", "Kate"] },
-];
-
-const usersWithFriends = users
-  .filter((user) => user.friends.length)
-  .map((user) => user.name);
-console.log("🚀 ~ usersWithFriends:", usersWithFriends);
-
-//11
-const numbers5 = [1, 2, 3, 4, 5, 6];
-const sortedNumbers = numbers5.reduce(
-  (acc, number) => {
-    number % 2 === 0 ? acc.even.push(number) : acc.odd.push(number);
-    return acc;
-  },
-  { even: [], odd: [] }
-);
-console.log(sortedNumbers);
-
-//12
-const words4 = ["apple", "banana", "apple", "orange", "banana", "apple"];
-const obj1 = words4.reduce((acc, word) => {
-  // acc.hasOwnProperty(word) ? (acc[word] += 1) : (acc[word] = 1);
-  acc[word] = (acc[word] || 0) + 1;
-  return acc;
-}, {});
-console.log(obj1);
+const num = numbers.concat(numbers1);
+console.log("🚀 ~ num:", num);
