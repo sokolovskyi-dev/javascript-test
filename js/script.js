@@ -3263,8 +3263,8 @@
 //   return acc;
 // }, {});
 // console.log(obj1);
-const numbers = [1, 2, 3, 4, 5];
-const numbers1 = numbers.map((number) => number * 6);
+// const numbers = [1, 2, 3, 4, 5];
+// const numbers1 = numbers.map((number) => number * 6);
 
-const num = numbers.concat(numbers1);
-console.log("🚀 ~ num:", num);
+// const num = numbers.concat(numbers1);
+// console.log("🚀 ~ num:", num);
