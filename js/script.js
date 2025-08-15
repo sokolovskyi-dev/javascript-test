@@ -3268,3 +3268,4 @@
 
 // const num = numbers.concat(numbers1);
 // console.log("🚀 ~ num:", num);
+// Создаём пустую карту
