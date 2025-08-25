@@ -3269,3 +3269,14 @@
 // const num = numbers.concat(numbers1);
 // console.log("🚀 ~ num:", num);
 // Создаём пустую карту
+const animal = {
+  speak() {
+    console.log("Animal sound");
+  },
+};
+console.log("🚀 ~ animal:", animal);
+
+function hello() {
+  console.log(12);
+}
+console.dir("🚀 ~ hello:", hello);
